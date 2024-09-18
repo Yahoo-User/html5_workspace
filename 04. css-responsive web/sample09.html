@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>sample09</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            width: 960px;
+            margin: 0 auto;
+
+            color: white;
+            background-color: green;
+
+            overflow: hidden;
+        }
+        div { 
+            border: 3px ridge white;
+            padding: 10px; 
+        }
+        #menu {
+            width: 120px;
+
+            float: right;
+        }
+        #section {
+            width: 770px;
+
+            float: left;
+        }
+        li { list-style: none; }
+
+
+        @media screen and (max-width: 767px) {
+            body { 
+                width: auto;
+                background-color: blue; 
+            }
+            #menu { width: auto; float: none; }
+            #section { width: auto; float: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>메뉴A</li>
+            <li>메뉴B</li>
+            <li>메뉴C</li>
+        </ul>
+    </div>
+
+    <div id="section">
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum eius quaerat unde minus deserunt consequatur fugiat dignissimos, suscipit obcaecati totam enim inventore sint explicabo incidunt est rerum. Facilis, architecto doloremque.</p>
+    </div>
+</body>
+</html>

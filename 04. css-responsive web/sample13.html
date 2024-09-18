@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>sample13</title>
+
+    <style>
+        * { border: 2px ridge gold; }
+        
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+        header {
+            width: 960px;
+            height: 120px;
+
+            color: white;
+            background-color: blue;
+
+            /* center #1 */
+            /* display: flex;
+            justify-content: center; */
+
+            /* center #2 */
+            /* position: relative; */
+        }
+        /* header > h1 {
+            position: absolute;
+
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+        .content {
+            float: left;
+            width: 600px;
+        }
+        .right-side {
+            float: right;
+            width: 300px;
+        }
+        footer {
+            clear: both;
+            width: 960px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+        <header>
+            <h1>HEADER</h1>
+        </header>
+
+        <section>
+            <div class="content">
+                <h2>CONTENT</h2>
+            </div>
+
+            <div class="right-side">
+                <h4>RIGHT SIDE</h4>
+            </div>
+        </section>
+
+        <footer>
+            <h3>FOOTER</h3>
+        </footer>
+
+    </div>
+</body>
+</html>

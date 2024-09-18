@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample23</title>
+    
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+
+            /* margin: 10px; */
+            padding: 10px;
+
+            border: 10px inset darkgray;
+            color: white;
+
+            position:absolute;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:nth-child(1) { 
+            background-color: red;
+
+            left:10px; top: 10px;
+            z-index: 100;
+        }
+        .box:nth-child(2) { 
+            background-color: green;
+
+            left: 50px; top: 50px;
+            z-index: 200;
+        }
+        .box:nth-child(3) { 
+            background-color: blue;
+
+            left: 90px; top: 90px;
+            z-index: 110;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><h1>1</h1></div>
+    <div class="box"><h1>2</h1></div>
+    <div class="box"><h1>3</h1></div>
+</body>
+</html>

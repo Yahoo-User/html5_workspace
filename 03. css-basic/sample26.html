@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample26</title>
+
+    <style>
+        .box {
+            width: 100px; height: 100px;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            float: left;
+            /* float: right; */
+
+            box-shadow: 20px 15px 9px 0px rgba(110, 168, 200, 0.65);
+            /* box-shadow: 5px 5px 25px inset rgb(175, 10, 10); */
+        }
+        .box:nth-child(2) {
+            background-color: rgb(12, 25, 202);
+            border: 10px ridge rgb(121, 182, 223);
+        }
+        .box:nth-child(3) {
+            background-color: rgb(240, 123, 13);
+            border: 10px ridge rgb(186, 190, 190);
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h1{
+            text-shadow: 10px 10px 20px rgb(74, 182, 52);
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum</h1>
+
+    <div class="box"><h2>1</h2></div>
+    <div class="box"><h2>2</h2></div>
+</body>
+</html>

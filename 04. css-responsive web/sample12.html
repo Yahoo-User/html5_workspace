@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>sample12</title>
+
+    <style>
+        * { margin: 0; padding: 0; font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif; }
+        a { text-decoration: none; }
+        li { list-style: none; }
+    </style>
+
+    <style>
+        .pull-left { float: left; }
+        .pull-right { float: right; }
+    </style>
+
+    <style>
+        body {
+            width: 960px;
+            margin: 0 auto;
+
+            background: #e6e6e6;
+        }
+
+        #page-wrapper {
+            margin: 40px 0; padding: 10px 20px;
+
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
+        }
+    </style>
+
+    <style>
+        #main-header { padding: 40px 50px; }
+
+        .master-title {
+            font-size: 30px;
+            color: #181818;
+        }
+
+        .master-description {
+            font-size: 15px; font-weight: 500;
+            color: #383838;
+        }
+    </style>
+
+    <style>
+        #main-navigation {
+            border-top: 1px solid #c8c8c8;
+            border-bottom: 1px solid #c8c8c8;
+            margin-bottom: 20px;
+            height: 40px;
+        }
+        .outer-menu-item {
+            float: left;
+            position: relative;
+        }
+        .outer-menu-item:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+
+    <style>
+        .menu-title {
+            display: block;
+
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+
+            padding: 5px 20px;
+        }
+        .inner-menu {
+            display: none;
+
+            position: absolute;
+            top: 40px; left: 0;
+
+            width: 100%;
+
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(5 ,5, 5, .9);
+
+            z-index: 1000;
+            text-align: center;
+        }
+        .inner-menu-item > a {
+            display: block;
+
+            padding: 5px 10px;
+            color: black;
+        }
+        .inner-menu-item > a:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <style>
+        .search-bar { height: 26px; padding: 7px; }
+        .input-search {
+            display: block;
+            float: left;
+
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 15px 0 0 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+
+            width: 120px; height: 24px;
+            padding: 0 0 0 10px;
+
+            font-size: 12px;
+            color: #555555;
+        }
+        .input-search:focus {
+            border-color: rgba(82, 168, 236, .8);
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        }
+        .input-search-submit {
+            display: block;
+            float: left;
+
+            width: 50px; height: 26px;
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #cccccc;
+
+            margin-left: -1px;
+            vertical-align: top;
+            display: inline-block;
+        }
+    </style>
+
+    <style>
+        #content { overflow: hidden; }
+        #main-section {
+            float: left;
+            width: 710px;
+        }
+        #main-aside {
+            float: right;
+            width: 200px;
+        }
+    </style>
+
+    <style>
+        article {
+            padding: 0 10px 20px 10px;
+            border-bottom: 1px solid #c8c8c8;
+        }
+        .article-header { padding: 20px 0; }
+        .article-title {
+            font-size: 25px;
+            font-weight: 500;
+
+            padding-bottom: 10px;
+        }
+        .article-date { font-size: 13px; }
+        .article-body { font-size: 14px; }
+    </style>
+
+    <style>
+        .aside-list { padding: 10px 0 30px 0; }
+        .aside-list > h3 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .aside-list li a {
+            margin-left: 8px;
+        }
+        .aside-list list a {
+            margin-left: 8px;
+            font-size: 13px;
+            color: #6c6c6c;
+        }
+    </style>
+
+    <style></style>
+    <style></style>
+</head>
+<body>
+
+    <div id="page-wrapper">
+
+        <!-- 헤더 -->
+        <header id="main-header">
+            <h1 class="master-title">HTML5 Example Preview</h1>
+            <h2 class="master-description">한빛아카데미</h2>
+        </header>   <!-- //.main-header -->
+
+
+        <!-- 내비게이션 -->
+        <nav id="main-navigation">
+
+            <div class="pull-left">
+
+                <ul class="outer-menu">
+
+                    <li class="outer-menu-item">
+                        <span class="menu-title">HTML5</span>
+
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                        </ul>
+                    </li>   <!-- //.outer-menu-item -->
+
+                    <li class="outer-menu-item">
+                        <span class="menu-title">CSS3</span>
+
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                        </ul>
+                    </li>   <!-- //.outer-menu-item -->
+
+                    <li class="outer-menu-item">
+                        <span class="menu-title">Javascript</span>
+
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                        </ul>   <!-- //.inner-menu -->
+                    </li>   <!-- //.outer-menu-item -->
+
+                </ul>   <!-- //.outer-menu -->
+
+            </div>  <!-- //.pull-left -->
+
+            <div class="pull-right">
+
+                <div class="search-bar">
+
+                    <form>
+                        <input type="text" class="input-search">
+                        <input type="submit" class="input-search-submit" value="검색">
+                    </form>
+
+                </div>  <!-- //.search-bar -->
+
+            </div>  <!-- //.pull-right -->
+
+        </nav>  <!-- //.main-navigation -->
+
+
+        <!-- 본몬 -->
+        <div id="content">
+
+            <!-- 본문좌측영역 -->
+            <section id="main-section">
+
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title">HTML5 개요와 활용</h1>
+
+                        <p class="article-date">2019년 02월 14일</p>
+                    </div>  <!-- //.article-header -->
+
+                    <div class="article-body">
+                        <img src="http://placehold.it/430x280">
+
+                        <br>
+                        <br>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora odit, corporis minima numquam beatae, molestiae aspernatur fuga distinctio consectetur deserunt amet. At minus possimus delectus velit in ea reprehenderit?</p>
+                    </div>  <!-- //.article-body -->
+                </article>  <!-- //.article -->
+
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-header">HTML5 응용과 실습</h1>
+
+                        <p class="article-date">2019년 02월 17일</p>
+                    </div>  <!-- //.article-header -->
+
+                    <div class="article-body">
+                        <img src="http://placehold.it/430x280">
+
+                        <br>
+                        <br>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora odit, corporis minima numquam beatae, molestiae aspernatur fuga distinctio consectetur deserunt amet. At minus possimus delectus velit in ea reprehenderit?</p>
+                    </div>  <!-- //.article-body -->
+                </article>  <!-- //.article -->
+
+            </section>  <!-- //.main-section -->
+
+            <!-- 본문우측영역 -->
+            <aside id="main-aside">
+
+                <div class="aside-list">
+                    <h3>카테고리</h3>
+
+                    <ul>
+                        <li><a href="#">데이터1</a></li>
+                        <li><a href="#">데이터2</a></li>
+                        <li><a href="#">데이터3</a></li>
+                        <li><a href="#">데이터4</a></li>
+                        <li><a href="#">데이터5</a></li>
+                    </ul>
+                </div>  <!-- //.aside-list -->
+
+                <div class="aside-list">
+                    <h3>최근글</h3>
+
+                    <ul>
+                        <li><a href="#">데이터1</a></li>
+                        <li><a href="#">데이터2</a></li>
+                        <li><a href="#">데이터3</a></li>
+                        <li><a href="#">데이터4</a></li>
+                    </ul>
+                </div>  <!-- //.aside-list -->
+
+            </aside>    <!-- //.main-aside -->
+
+        </div>  <!-- //.content -->
+
+
+        <!-- 푸터 -->
+        <footer id="main-footer">
+            <a href="#">IT Cookbook, HTML5 Programming</a>
+        </footer>   <!-- //.main-footer -->
+
+    </div>
+
+</body>
+</html>

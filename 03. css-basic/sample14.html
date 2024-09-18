@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample14</title>
+
+    <style>
+        /* 가상클래스선택자 */
+        input:enabled {
+            background-color: orange;
+        }
+        input:disabled {
+            background-color: gray;
+        }
+        input:focus {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>사용가능</h2>
+    <input type="text">
+
+    <h2>사용불가능</h2>
+    <input type="text" disabled="disabled">
+</body>
+</html>
