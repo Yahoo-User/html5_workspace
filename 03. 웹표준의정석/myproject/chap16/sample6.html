@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample6</title>
+</head>
+
+<body>
+
+    <h1>sample6.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+        
+        var today = new Date();
+        // var today = new Date('2022-03-05');                 // YYYY-MM-DD
+        // var today = new Date('2022-3-5');                   // YYYY-M-D (날짜만 지정하는 경우)
+        // var today = new Date('2022-03-05T15:51:23');        // YYYY-MM-DDTHH:MM:SS  (시간까지 지정하는 경우)
+        // var today = new Date('2022-03-05T15:51:23Z');       // YYYY-MM-DDTHH:MM:SSZ (UTC기준)
+        // var today = new Date('03/05/2022');                 // MM/DD/YYYY
+        // var today = new Date('Thu Jan 20 2022 00:00:00 GMT+0900 (한국 표준시)');
+
+        // var today = new Date('2022-3-5T15:01:23');       // XX : T가 들어가면, 0 생략불가(날짜/시간모두)
+        // var today = new Date('2022-03-05T15:1:3');       // XX : T가 들어가면, 0 생략불가(날짜/시간모두
+
+
+        document.write('today: ', today);
+
+        // ---
+        
+        document.write('<hr>');
+
+        var year = today.getFullYear();
+        document.write('<p>', '1. getFullYear : ', year, '</p>');
+
+        var month = today.getMonth();               // 0 ~ 12 (***)
+        document.write('<p>', '2. getMonth : ', month, '</p>');
+
+        var date = today.getDate();                 // 1 ~ 31 
+        document.write('<p>', '3. getDate : ', date, '</p>');
+
+        var day = today.getDay();                   // 0 (일) ~ 6 (토) (***)
+        document.write('<p>', '4. getDay : ', day, '</p>');
+
+        var time = today.getTime();                 // in milliseconds, from 1970/1/1 00:00 이후 ~ 현재까지의 밀리초
+        document.write('<p>', '5. getTime : ', time, '</p>');
+
+        var hours = today.getHours();               // 0 ~ 23 (***)
+        document.write('<p>', '6. getHours : ', hours, '</p>');
+
+        var minutes = today.getMinutes();           // 0 ~ 59 (***)
+        document.write('<p>', '7. getMinutes : ', minutes, '</p>');
+
+        var seconds = today.getSeconds();           // 0 ~ 59 (***)
+        document.write('<p>', '8. getSeconds : ', seconds, '</p>');
+
+        var milliseconds = today.getMilliseconds(); // 0 ~ 999 (***)
+        document.write('<p>', '9. getMilliseconds : ', milliseconds, '</p>');
+
+        // ---
+
+        today.setFullYear('3100');
+        today.setMonth(11);             // 0 ~ 11
+        today.setDate(1);               // 1 ~ 31
+        today.setTime(time);            // set time in milliseconds
+        today.setHours(0);              // 0 ~ 23
+        today.setMinutes(0);            // 0 ~ 59
+        today.setSeconds(0);            // 0 ~ 59
+        today.setMilliseconds(0);       // 0 ~ 999
+
+        document.write('<hr>');
+        document.write('<p>', 'today : ', today, '</p>');
+
+        // ---
+
+        document.write('<hr>');
+        document.write('1. toLocaleString : ', today.toLocaleString(), '<br>');
+        document.write('2. toLocaleDateString : ', today.toLocaleDateString(), '<br>');
+        document.write('3. toLocaleTimeString : ', today.toLocaleTimeString(), '<br>');
+        document.write('4. toString : ', today.toString(), '<br>');
+        document.write('5. toUTCString : ', today.toUTCString(), '<br>');
+        document.write('6. toISOString : ', today.toISOString(), '<br>');
+        document.write('7. toJSON : ', today.toJSON(), '<br>');
+
+    </script>
+    
+</body>
+
+</html>

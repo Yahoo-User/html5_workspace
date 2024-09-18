@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sample5</title>
+
+    <link rel="stylesheet" href="./css/kbd.css">
+</head>
+
+<body>
+    <h3>/sample5.html</h3>
+    <hr>
+
+    
+    <kbd>041. &#60;embed&#62; Defines a container for an external application.</kbd><p/>
+
+        <embed type="image/jpg" src="https://picsum.photos/id/684/600/400" width="300" height="200">
+
+        <hr>
+
+        <embed type="text/html" src="snippet.html" width="500" height="300">
+
+        <hr>
+
+    
+    <kbd>042. &#60;fieldset&#62; Groups related elements in a form.</kbd><p/>
+
+        <form action="/action_page.php">
+
+            <fieldset>
+                <legend>Personalia:</legend>
+
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+
+        </form>
+
+        <hr>
+
+        <form>
+            <fieldset>
+                <legend>Choose your favorite monster</legend>
+            
+                <input type="radio" id="kraken" name="monster" value="K" />
+                <label for="kraken">Kraken</label><br />
+            
+                <input type="radio" id="sasquatch" name="monster" value="S" />
+                <label for="sasquatch">Sasquatch</label><br />
+            
+                <input type="radio" id="mothman" name="monster" value="M" />
+                <label for="mothman">Mothman</label>
+            </fieldset>
+        </form>
+
+        <hr>
+
+        <form action="#">
+            <fieldset>
+                <legend>Do you agree?</legend>
+
+                <input type="checkbox" id="chbx" name="agree" value="Yes!" />
+                <label for="chbx">I agree</label>
+            </fieldset>
+        </form>
+
+        <hr>
+
+    
+    <kbd>043. &#60;figcaption&#62; Defines a caption for a &#60;figure&#62; element.</kbd><br>
+    <kbd>044. &#60;figure&#62; Specifies self-contained content.</kbd><p/>
+
+        <style>
+            figure {
+                border: thin #c0c0c0 solid;
+                display: flex;
+                flex-flow: column;
+                padding: 5px;
+                max-width: 220px;
+                margin: auto;
+            }
+        
+            img {
+                max-width: 220px;
+                max-height: 150px;
+            }
+        
+            figcaption {
+                background-color: #222;
+                color: #fff;
+                font: italic smaller sans-serif;
+                padding: 3px;
+                text-align: center;
+            }
+        </style>
+
+
+        <figure>
+            <img src="https://picsum.photos/300/200" alt="Trulli">
+
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        </figure>
+
+        <hr>
+
+        <figure>
+            <img src="https://picsum.photos/660/480" alt="Elephant at sunset">
+
+            <figcaption>An elephant at sunset</figcaption>
+        </figure>
+
+        <hr>
+
+    
+    <kbd>045. &#60;font&#62; Defines font, color, and size for text. Not supported in HTML5. Use CSS instead.</kbd><p/>
+
+        <p style="color:red">This is a paragraph.</p>
+        <p style="color:blue">This is another paragraph.</p>
+
+        <hr>
+
+        <p style="font-family:verdana">This is a paragraph.</p>
+        <p style="font-family:'Courier New'">This is another paragraph.</p>
+
+        <hr>
+
+        <p style="font-size:30px">This is a paragraph.</p>
+        <p style="font-size:11px">This is another paragraph.</p>
+
+        <hr>
+
+    
+    <kbd>046. &#60;footer&#62; Defines a footer for a document or section.</kbd><p/>
+
+        <style>
+            article {
+                min-height: 100%;
+
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+            }
+            
+            footer {
+                display: flex;
+                justify-content: center;
+
+                max-width: 40%;
+                padding: 5px;
+                background-color: #45a1ff;
+                color: #fff;
+            }
+        </style>
+
+        <footer>
+            <p>Author: Hege Refsnes</p>
+            <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+        </footer>
+
+        <hr>
+
+        <article>
+            <h3>How to be a wizard</h3>
+
+            <ol>
+                <li>Grow a long, majestic beard.</li>
+                <li>Wear a tall, pointed hat.</li>
+                <li>Have I mentioned the beard?</li>
+            </ol>
+
+            <footer>
+                <p>© 2018 Gandalf</p>
+            </footer>
+        </article>
+    
+        <hr>
+
+    
+    <kbd>047. &#60;form&#62; Defines an HTML form for user input.</kbd><p/>
+
+        <form action="/action_page.php" method="get">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <form action="/action_page.php" method="get">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+
+            <input type="radio" id="css" name="fav_language" value="CSS" checked="checked">
+            <label for="css">CSS</label><br>
+
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+    
+    <kbd>048. &#60;frame&#62; Defines a window (a frame) in a frameset. Not supported in HTML5.</kbd><p/>
+    <kbd>049. &#60;frameset&#62; Defines a set of frames. Not supported in HTML5.</kbd><p/>
+
+        <style>
+            iframe {
+                border: 1px solid black;
+                /* width: 50%; takes precedence over the width set with the HTML width attribute */
+            }
+        </style>
+
+        <iframe src="https://www.w3schools.com" width="300" height="200">
+            <!-- Refused to frame 'https://www.w3schools.com/' 
+                 because an ancestor violates the following Content Security Policy directive: 
+                    "frame-ancestors 'self' https://mycourses.w3schools.com https://pathfinder.w3schools.com". -->
+        </iframe>
+
+        <hr>
+
+        <iframe
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="300"
+            height="200"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+        </iframe>
+
+        <hr>
+
+        <iframe
+            src="https://example.org"
+            title="iframe Example 1"
+            width="300"
+            height="200">
+        </iframe>
+
+        <hr>
+
+    
+    <kbd>050. &#60;h1&#62; to &#60;h6&#62; Contains metadata/information for the document.</kbd><p/>
+
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5>This is heading 5</h5>
+        <h6>This is heading 6</h6>
+
+        <hr>
+    
+
+</body>
+
+</html>
+
+
+

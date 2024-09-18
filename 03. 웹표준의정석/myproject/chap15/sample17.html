@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample17</title>
+
+    <style>
+        div.item {
+            position: relative;
+
+            width: 500px;
+            /* padding: 15px 20px; */
+        }
+        div.item .over {
+            position:absolute;
+            left:10px;
+            bottom:15px;
+        }
+        #desc {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample17.html</h1>
+
+    <hr>
+
+    <div class="item">
+        <img src="https://picsum.photos/id/684/400/200" alt="">
+
+        <button class="over" onclick="showDetail();">Show Details</button>
+    </div>
+
+    <div id="desc" class="detail">
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    
+        <button onclick="hideDetail();">Hide Details</button>
+    </div>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        function showDetail() {
+            console.debug('showDetail() invoked.');
+
+            var div = document.querySelector("#desc");
+            div.style.display = 'block';
+        } // showDetail
+
+        // ---
+
+        function hideDetail() {
+            console.debug('hideDetail() invoked.');
+
+            var div = document.querySelector('#desc');
+            div.style.display = "none";
+        } // hideDetail
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* Attributes Selector */
+
+/* [type=text] { */
+[type="text"] {
+/* input[type="text"] { */
+    border: 5px double blue;
+}
+
+[type=password] {
+    border: 5px ridge red;
+}
+
+input[type=url] {
+    border: 5px outset green;
+}

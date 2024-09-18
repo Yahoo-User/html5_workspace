@@ -1,0 +1,433 @@
+figure {
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(25deg, violet, pink);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+/* ============================================ */
+
+figure h1 {
+    position: absolute;
+    top: 7vh;
+    left: 4vw;
+
+    font-size: 0;
+}
+figure h1 strong {
+    font-size: 36px;
+    font-family: Ubuntu;
+    line-height: 1.4;
+    letter-spacing: 1px;
+
+    color: white;
+}
+figure h1 span {
+    font-size: 14px;
+    font-family: Ubuntu;
+    line-height: 1;
+    letter-spacing: 1px;
+
+    color: white;
+    opacity: .8;
+}
+
+/* ============================================ */
+
+figure .menu {
+    position: absolute;
+    top: 8vh;
+    right: 4vw;
+
+    font-size: 24px;
+
+    color: white;
+}
+
+/* ============================================ */
+
+figure > p {
+    position: absolute;
+    bottom: 7vh;
+    left: 50%;
+
+    /* 가로축으로 가운데로 이동 */
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-family: Arial;
+    line-height: 1;
+    letter-spacing: 2px;
+
+    color: white;
+    opacity: .8;
+}
+
+/* ============================================ */
+
+figure section {
+    /* Viewport center 에 위치시킴 */
+    width: 20vw;
+    height: 65vh;
+    margin-top: -32vh;
+    margin-left: -10vw;
+    border: 5px double hotpink;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* ============================================ */
+
+figure section article {
+    width: 100%;
+    height: 100%;
+
+    /* 8 개의 모든 article 요소의 영역을 겹치게 함 */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+figure section article .inner {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+    padding: 5vh 2.5vw 8vh;
+    border-radius: 10px;
+
+    background-color: #f0f7ff;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .1);
+    opacity: .6;
+
+    transform: scale(.8);
+
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ============================================ */
+
+/* 각 앨범패널을 45도 회전시켜 방사형으로 이동시키는 작업은
+자바스크립트에서 함. (***) */
+
+/* ============================================ */
+
+/* 전체 section 프레임을 한 화면 이상(1.4배) 아래로 내림 */
+figure section {
+    top: 140%;
+
+    /* Vewport Height 25%(25vh) 만큼 아래로(-) 다시 내림 */
+    margin-top: -25vh;
+
+    border: 0;
+}
+
+/* ============================================ */
+
+figure section article .inner {
+    transition: opacity 1s, transform 1s;
+}
+figure section article.on .inner {
+    opacity: .9;
+    transform: scale(1.1);
+}
+
+/* ============================================ */
+
+figure section article .inner .pic {
+    width: 15vw;
+    height: 15vw;
+    margin: 0px auto;
+    border-radius: 50%;
+    /* border: 1px solid blue; */
+
+    background-repeat: no-repeat;
+
+    /* 이 요소에는 배경이미지가 보이지 않도록 하고 대신,
+    .pic::before, .pic::after 영역에 배경이미지가 출력되도록 함. */
+    background-position: 200% 200%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figure section article .inner .pic::before,         /* ::before - 앨범사진의 그림자로 사용 */
+figure section article .inner .pic::after {         /* ::after - 앨범사진 출력용으로 사용 */
+    /* content: 'Before/After'; */
+    content: '';
+    display: block;
+
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    /* border: 1px dotted green; */
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    background-image: inherit;
+    background-position: center;
+    background-repeat: inherit;
+    background-size: cover;
+
+    transform-origin: center center;
+}
+figure section article .inner .pic::before {
+    transform: translateY(10%);                     /* 아래로 약간 이동시킴 */
+
+    filter: blur(20px) brightness(1.6);
+}
+figure section article .inner .pic .dot {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+
+    background-color: #e4f1ff;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .1);
+
+    position: relative;
+
+    z-index: 3;
+}
+
+/* ============================================ */
+
+figure section article .inner .txt {
+    text-align: center;
+
+    position: relative;
+
+    z-index: 3;
+}
+figure section article .inner .txt h2 {
+    margin-bottom: 2vh;
+
+    font-size: 24px;
+    font-family: Ubuntu;
+
+    color: #222;
+}
+figure section article .inner .txt p {
+    margin-bottom: 3vh;
+
+    font-size: 14px;
+    color: #777;
+}
+figure section article .inner .txt ul {
+    display: flex;
+    justify-content: space-around;
+}
+figure section article .inner .txt ul li {
+    cursor: pointer;
+    opacity: .6;
+
+    transition: .5s;
+}
+figure section article .inner .txt ul li.play {
+    transform: scale(1.5);
+    opacity: .9;
+}
+figure section article .inner .txt ul li:hover {
+    transform: scale(1.5);
+    opacity: .8;
+}
+figure section article .inner .txt ul li.play:hover {
+    transform: scale(2);
+    opacity: 1;
+}
+
+/* ============================================ */
+
+@keyframes album_cover {
+    0%      { transform: rotate(0deg); }
+    100%    { transform: rotate(360deg); }
+}
+
+@keyframes album_shadow {
+    0%      { transform: translateY(10%) rotate(0deg); }
+    100%    { transform: translateY(10%) rotate(360deg); }
+}
+
+figure section article .inner .pic.on::after {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: album_cover 3s linear 0s infinite;
+}
+figure section article .inner .pic.on::before {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: album_shadow 3s linear 0s infinite;
+}
+
+/* ============================================ */
+
+figure {
+    transition: 1s;
+}
+
+/* ============================================ */
+
+figure .btnPrev {
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-20vw, -50%);
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    cursor: pointer;
+}
+figure .btnPrev span {
+    font-size: 16px;
+    font-family: Ubuntu;
+    line-height: 1;
+
+    color: white;
+    opacity: 1;
+
+    transform: translateX(30%);
+    transition: .5s;
+}
+figure .btnPrev::before {
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 0px;
+
+    transform-origin: left center;
+    transform: rotate(-180deg);
+
+    transition: .5s;
+}
+figure .btnPrev::after {
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: white;
+
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+
+    transform-origin: left center;
+    transform: rotate(180deg);
+
+    transition: .5s;
+}
+figure .btnPrev:hover span {
+    opacity: 0;
+
+    transform: translateX(100%);
+}
+figure .btnPrev:hover::before {
+    transform: rotate(-30deg);
+}
+figure .btnPrev:hover::after {
+    transform: rotate(30deg);
+}
+
+/* ============================================ */
+
+figure .btnNext {
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+
+    transform: translate(20vw, -50%);
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    cursor: pointer;
+}
+figure .btnNext span {
+    font-size: 16px;
+    font-family: Ubuntu;
+    line-height: 1;
+
+    color: white;
+
+    opacity: 1;
+    transform: translateX(-30%);
+
+    transition: .5s;
+}
+figure .btnNext::before {
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 0px;
+
+    transform-origin: right center;
+    transform: rotate(180deg);
+
+    transition: .5s;
+}
+figure .btnNext::after {
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: white;
+
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+
+    transform-origin: right center;
+    transform: rotate(-180deg);
+
+    transition: .5s;
+}
+figure .btnNext:hover span {
+    opacity: 0;
+
+    transform: translateX(-100%);
+}
+figure .btnNext:hover::before {
+    transform: rotate(30deg);
+}
+figure .btnNext:hover::after {
+    transform: rotate(-30deg);
+}
+
+

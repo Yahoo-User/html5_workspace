@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+section {
+    border: 10px outset gold;
+
+    background-color: lightcyan;
+
+
+    /* 부모 요소에만 display: flex; 를 지정하고, 자식 요소에 크기(너비/높이)를 지정하지 않으면,
+        - 자식 요소는 display: inline-block 으로 설정되어,
+        - 자식 요소의 크기는 콘텐츠 크기로 설정됨(inline) */
+
+    display: flex;
+}
+section article {
+    width: 300px;
+    border: 1px solid gray;
+
+    background-color: aqua;
+
+    box-sizing: border-box;
+
+    font-size: 50px;
+
+    /* 효과없음 */
+    /* text-align: center; */
+
+
+    /* 부모 요소에만 display: flex; 를 지정하고, 자식 요소에 크기(너비/높이)를 지정하지 않으면,
+        - 자식 요소는 display: inline-block 으로 설정되어,
+        - 자식 요소의 크기는 콘텐츠 크기로 설정됨(inline) */
+
+    display: flex;
+}
+section article:nth-of-type(1) {
+    /*  
+        `flex-grow` : 자식요소의 `안쪽여백만` *비율로* 조절한 뿐, 전체 자식요소의 너비 *비율을* 조절하지 않음.
+
+        (1) 남은 부모영역의 크기를 똑같이 배분하고, 
+        (2) 안쪽여백을 설정해, 
+        (3) 자식요소 크기가 늘어남
+        (4) 0으로 지정하면, `원래크기`가 됨
+    */
+
+    flex-grow: 3;
+}
+section article:nth-of-type(2) {
+    /*  
+        `flex-grow` : 자식요소의 `안쪽여백만` *비율로* 조절한 뿐, 전체 자식요소의 너비 *비율을* 조절하지 않음.
+        
+        (1) 남은 부모영역의 크기를 똑같이 배분하고, 
+        (2) 안쪽여백을 설정해, 
+        (3) 자식요소 크기가 늘어남
+        (4) 0으로 지정하면, `원래크기`가 됨
+    */
+
+    /* flex-grow: 1; */
+    flex-grow: 1;
+}
+section article:nth-of-type(3) {
+    /*  
+        `flex-grow` : 자식요소의 `안쪽여백만` *비율로* 조절한 뿐, 전체 자식요소의 너비 *비율을* 조절하지 않음.
+        
+        (1) 남은 부모영역의 크기를 똑같이 배분하고, 
+        (2) 안쪽여백을 설정해, 
+        (3) 자식요소 크기가 늘어남
+        (4) 0으로 지정하면, `원래크기`가 됨
+    */
+
+    /* flex-grow: 1; */
+    flex-grow: 2;
+}
+
+

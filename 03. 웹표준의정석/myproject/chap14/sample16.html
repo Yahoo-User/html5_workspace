@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample16</title>
+
+    <style>
+        div {
+            display: inline-block;
+
+            margin: 15px;
+            padding: 0px 20px 30px;
+            border: 1px solid purple;
+            line-height: 2;
+        }
+        div h3 {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample16.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        for (var i=1; i<=9; i++) {
+            console.log(`Outer-${i}`);
+
+            for(var j=1; j<=9; j++) {
+                console.log(`\t+ Inner-${j}`);
+            } // inner-for
+        } // outer-for
+
+        // ---
+
+        for (var i=1; i<=9; i++) {
+            console.log('-------');
+
+            for(var j=1; j<=9; j++) {
+                console.log(`${i} * ${j} = ${ i * j }`);
+            } // inner-for
+
+        } // outer-for
+
+        // ---
+
+        for (var i=1; i<=9; i++) {
+            document.write('<div>');
+            document.write(`<h3>${i} 단</h3>`);
+
+            for(var j=1; j<=9; j++) {
+                document.write(`${i} * ${j} = ${ i * j }`, '<br>');
+            } // inner-for
+
+            document.write('</div>');
+        } // outer-for
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    width: 100%;
+    height: 100vh;
+
+    background-color: lightgray;
+}
+main section {
+    width: 100%;
+    height: 100%;
+    border: 10px solid purple;
+
+    box-sizing: border-box;
+
+    /* --- */
+
+    display: flex;
+
+    flex-flow: row wrap;
+    /* flex-flow: column wrap; */
+
+    /* 
+        justify-content: flex 부모요소의 기본축에 따라, 모든 자식요소의 정렬방식 결정:
+        
+        (1) flex-start      - 자식요소를 태그작성순서에 따라, flex 부모요소의 시작방향(flex 기본축 기준)으로 정렬(배치) <- default (***)
+        (2) flex-end        - 자식요소를 태그작성순서에 따라, flex 부모요소의 종료방향(flex 기본축 기준)으로 정렬(배치)
+        (3) center          - 자식요소를 flex 부모요소 영역의 가운데에 정렬(배치)
+        (4) space-between   - 자식요소간의 좌/우 사이 여백만 균일하게 배분하여 정렬(배치)
+                            - 즉 자식요소들을, flex 부모요소의 양끝으로 배치한 뒤, 자식요소 간의 간격을 균일하게 나눠서 배치
+        (5) space-around    - 자식요소들의 여백을 균일하게 배분하여 정렬(배치)
+                            - 즉 자식요소들을, flex 부모요소의 양끝으로 배치하되, 자식요소 간의 안쪽간격의 1/2 만큼,
+                              양 끝에도 여백을 지정하여 배치
+        (6) space-evenly    - 자식요소들의 여백을 양끝까지 균일하게 배분하여 정렬(배치)
+                            - 즉 space-around 속성값과 비슷하나, 자식요소 간의 안쪽간격만큼 동일하게 양 끝에도 여백을 지정하여 배치
+    */
+
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+main section article {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+
+    color: white;
+    background-color: brown;
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px;
+}

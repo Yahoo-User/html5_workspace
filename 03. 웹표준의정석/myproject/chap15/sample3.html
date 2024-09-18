@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample3</title>
+</head>
+
+<body>
+
+    <h1>sample3.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // 1. variable without `var` has 'global' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          XX
+        // 2. `var` variable has 'function' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          OK
+        // 3. `let` variable has 'block' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // 4. `const` variable has 'block' scope.
+        //      - Re-assignment     XX
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // *************************************************** //
+
+        function addNumber(num1, num2) {
+            return num1 + num2;
+        } // addNumber
+
+        // ---
+
+        var sum = addNumber(100, 200);      // defined.
+        console.log(`1. sum: ${sum}`);
+
+        // ---
+
+        sum = 50;                           // re-assigned.
+        console.log(`2. sum: ${sum}`);
+
+        // ---
+
+        var sum = 1000;                     // re-defined.
+        console.log(`3. sum: ${sum}`);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.wrap {
+    width: 800px;
+    margin: 100px auto;
+
+    border: 10px inset purple;
+}
+.wrap .left {
+    width: 400px;
+    height: 400px;
+
+    background-color: pink;
+
+    float: left;
+}
+.wrap .right {
+    width: 400px;
+    height: 400px;
+
+    background-color: lightblue;
+
+    float: left;
+    /* float: right; */
+}
+.wrap::after {
+    /* content: 'hello'; */
+    content: '';
+
+    /* 아래 두개의 속성으로, <div>태그가 자식요소의 높이값을 인식할 수 있도록 해줌. */
+    /* 1. 강제로 display 속성값을 block으로 해야만, 인식가능함. */
+    /* 2. 더불어, float 속성을 clear 시킴으로써, 역시 자식요소의 너비값을 자동인식하게 해줌. */
+    display: block;             /* 가상요소(::after)이기 때문에, inline임. 이를 block으로 강제변환 (***) */
+    clear: both;                /* (***) */
+}

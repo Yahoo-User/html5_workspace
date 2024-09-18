@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    width: 100%;
+    height: 100vh;
+
+    background-color: lightgray;
+}
+main section {
+    width: 100%;
+    height: 100%;
+    border: 10px solid purple;
+
+    box-sizing: border-box;
+
+    /* --- */
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    /* 
+        align-content or align-items : flex 부모 요소의 `반대축`에 따라, 모든 자식요소의 정렬방식 결정:
+        - align-content : 자식요소가 여러개라서, 줄바꿈(wrap)이 필요할 때 사용
+                          즉 줄바꿈(wrap)이 필요한 자식요소가 여러개 일 경우 사용 (***)
+        - align-items   : 자식요소가 1개이거나, 줄바꿈(wrap)이 필요없을 때 사용   (***)
+                          만일 줄바꿈(wrap)해야 할 자식요소가 여러개일 경우,
+                          줄바꿈(wrap)은 되긴 하나, 제대로 되지 않음 -> 이 경우, align-content 속성사용
+
+
+        (1) flex-start      - 자식요소를 부모요소의 `반대축`에 따라, 시작방향으로 정렬
+        (2) flex-end        - 자식요소를 부모요소의 `반대축`에 따라, 종료방향으로 정렬
+        (3) center          - 자식요소를 부모요소의 `반대축`에 따라, 가운데 방향으로 정렬
+        (4) space-between   - 자식요소를 부모요소의 `반대축`에 따라, 자식요소간의 좌/우사이 간격만 균일하게 배분해서 정렬
+        (5) space-around    - 자식요소를 부모요소의 `반대축`에 따라, 자식요소간의 여백을 양끝에 1/2씩 균일하게 배분해서 정렬
+                              (align-content 속성의 경우, center 효과도 적용됨)
+        (6) space-evenly    - 자식요소를 부모요소의 `반대축`에 따라, 자식요소간의 여백을 양끝까지 균일하게 배분해서 정렬
+                              (align-content 속성의 경우, center 효과도 적용됨)
+    */
+
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: space-between; */
+    /* align-items: space-around; */
+    /* align-items: space-evenly; */
+
+    /* --- */
+
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    align-content: space-evenly;
+}
+main section article {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+
+    color: white;
+    background-color: brown;
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px;
+}

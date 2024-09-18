@@ -1,0 +1,28 @@
+article {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+
+    border: 5px solid purple;
+
+    background-color: rgb(60, 241, 60);
+}
+
+@media screen and (max-width: 399px) {
+    article {
+        background-color: red;
+        border: 5px outset gold;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    article {
+        background-color: aqua;
+        border: 5px double red;
+    }
+}
+@media screen and (min-width: 901px) {
+    article {
+        background-color: blue;
+        border: 5px ridge yellow;
+    }
+}

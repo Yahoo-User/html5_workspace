@@ -1,0 +1,13 @@
+/* ID Selector */
+
+#header {
+    border: 5px solid red;
+}
+
+#section {
+    border: 5px double blue;
+}
+
+#footer {
+    border: 5px ridge green;
+}

@@ -1,0 +1,37 @@
+.wrap {
+    width: 400px;
+    height: 400px;
+
+    color: white;
+    border: 1px solid #000;
+    margin: 100px auto;
+
+    font-size: 16px;
+    text-align: center;
+
+    position: relative;
+}
+.wrap .left {
+    width: 200px;
+    height: 200px;
+
+    background-color: blue;
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    opacity: 1.;
+}
+.wrap .right {
+    width: 200px;
+    height: 200px;
+
+    background-color: red;
+    
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+    opacity: .5;
+}

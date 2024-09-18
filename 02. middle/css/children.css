@@ -1,0 +1,9 @@
+/* Descendent Selector */
+/* ul li {
+    border: 5px solid blue;
+} */
+
+/* Children Selector */
+ul > li {
+    border: 5px solid green;
+}

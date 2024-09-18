@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="icon" href="ico/favicon.ico" type="image/x-icon"> -->
+
+    <link rel="icon" href="http://localhost:8080/favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="http://localhost:8080/favicon.ico" type="image/x-icon" crossorigin> -->
+    <!-- <link rel="icon" href="http://localhost:8080/favicon.ico" type="image/x-icon" crossorigin=""> -->
+    <!-- <link rel="icon" href="http://localhost:8080/favicon.ico" type="image/x-icon" crossorigin="anonymous"> -->
+
+
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
+
+    <!-- Access to CSS stylesheet at 'http://localhost:8080/css/style.css' from origin 'http://127.0.0.1:5500' has been blocked
+         by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. -->
+
+    <!-- <link rel="stylesheet" href="http://localhost:8080/css/style.css" crossorigin> -->
+    <!-- <link rel="stylesheet" href="http://localhost:8080/css/style.css" crossorigin=""> -->
+    <!-- <link rel="stylesheet" href="http://localhost:8080/css/style.css" crossorigin="anonymous"> -->
+
+    <title id="title">crossorigin</title>
+</head>
+
+<body>
+
+    <h1>crossorigin</h1>
+
+    <hr>
+
+    <script src="http://localhost:8080/js/external.js"></script>
+
+    <!-- 1. When using crossorigin="anonymous", 
+         You can use the following <script> element to tell a browser 
+         to execute the http://localhost:8080/js/external.js script without sending user-credentials. -->
+
+    <!-- Access to script at 'http://localhost:8080/js/external.js' from origin 'http://127.0.0.1:5500' has been blocked
+         by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. -->
+    <!-- <script src="http://localhost:8080/js/external.js" crossorigin="anonymous"></script> -->
+
+    <!-- 2. Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. -->
+    <!-- <script src="http://localhost:8080/js/external.js" crossorigin></script> -->
+    <!-- <script src="http://localhost:8080/js/external.js" crossorigin=""></script> -->
+
+    <!-- 3. When using crossorigin="use-credentials",
+            Request uses CORS headers, credentials flag is set to 'include' and user credentials are always included. -->
+    <!-- <script src="http://localhost:8080/js/external.js" crossorigin="use-credentials"></script> -->
+
+
+
+
+</body>
+
+</html>

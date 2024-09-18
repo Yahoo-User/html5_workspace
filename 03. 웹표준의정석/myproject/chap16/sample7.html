@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample7</title>
+
+    <style>
+        div#time {
+            box-sizing: border-box;
+
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 5px double darkgoldenrod;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+        }
+        div#time h1#days {
+            color: darkmagenta;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample7.html</h1>
+
+    <hr>
+
+    <div id="time">
+        <text>From 2022-01-01</text>
+        <text>Passed days until today </text>
+
+        <h1 id="days">7</h1>
+    </div>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var startDay = new Date('2022-01-01');
+        var today = new Date();
+
+        var startTime = startDay.getTime();
+        var nowTime = today.getTime();
+
+        var elapsedTime = nowTime - startTime;
+
+        var elapsedDays = Math.round( elapsedTime / (1000*60*60*24) );
+        console.log('elapsedDays:', elapsedDays);
+
+        // ---
+
+        var h1 = document.querySelector('#days');
+
+        h1.innerHTML = elapsedDays;
+        // h1.innerText = elapsedDays;
+        // h1.textContent = elapsedDays;
+
+    </script>
+
+</body>
+
+</html>

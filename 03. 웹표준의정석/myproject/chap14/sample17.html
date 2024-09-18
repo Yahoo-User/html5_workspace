@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample17</title>
+</head>
+
+<body>
+
+    <h1>sample17.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var number = parseInt(prompt('정수를 입력하세요.', '1'));
+
+        if (!Number.isNaN(number)) {  // 유효한 숫자를 입력햇다면...
+
+            var factorial = 1;
+
+            // ---
+
+            // 1st. method using for statement.
+
+            for(var i=2; i <= number; i++) {
+                factorial = factorial * i;
+                // factorial *= i;
+            } // classical for
+
+            // ---
+
+            // 2nd. method using while statement.
+
+            // var i = 2;
+
+            // while (i <= number) {
+            //     factorial = factorial * i;
+            //     // factorial *= i;
+
+            //     ++i;
+            // } // while
+
+            // ---
+
+            // 3rd. method using do-while statement.
+
+            // var i = 1;
+
+            // do {
+            //     factorial = factorial * i;
+            //     // factorial *= i;
+
+            //     ++i;
+            // } while(i <= number);
+
+            // ---
+
+            console.log(`${number}! = ${factorial}`);
+
+        } else {
+            alert('Invalid integer');
+        } // if-else
+
+    </script>
+</body>
+
+</html>

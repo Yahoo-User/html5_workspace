@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample9</title>
+</head>
+
+<body>
+
+    <h1>sample9.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear(); console.group('sample9');
+
+        // *************************************************** //
+        // 1. variable without `var` has 'global' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          XX
+        // 2. `var` variable has 'function' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          OK
+        // 3. `let` variable has 'block' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // 4. `const` variable has 'block' scope.
+        //      - Re-assignment     XX
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // *************************************************** //
+
+        // 1st. method
+        // ES5 : default parameter value NOT permitted.
+        function addNumber(num1, num2) {
+            console.debug(`>>> addNumber(${num1}, ${num2}) invoked.`);
+
+            var sum = num1 + num2;
+            console.log(`\t+ sum: ${sum}`);
+
+            return sum;
+        } // addNumber
+
+        // ---
+
+        // 2nd. method
+        // ES6 : default parameter value PERMITTED.
+        // function addNumber(num1, num2 = 0) {            // OK
+        // function addNumber(num1 = 0, num2 = 0) {        // OK
+        // function addNumber(num1 = 0, num2) {            // OK
+        //     console.debug(`>>> addNumber(${num1}, ${num2}) invoked.`);
+
+        //     return num1 + num2;
+        // } // addNumber
+
+        // ---
+
+        // 3rd. method
+        // Using variable arguments.
+        // function addNumber(...numbers) {    // varargs
+        //     console.debug('>>> addNumber(', numbers, ') invoked.');
+
+        //     console.debug(`\t+ length: ${numbers.length}`);
+        //     numbers.forEach(num => console.debug('\t\t- num:', num));
+
+        //     var sum = 0;
+
+        //     for (let number of numbers) {
+        //         sum += number;
+        //     } // for-of (enhanced for)
+
+        //     return sum;
+        // } // addNumber
+
+        // ---
+
+        // `Function Overloading` NOT permitted, just "OVERRITTEN".
+        console.log(addNumber);
+
+        // ---
+
+        console.log(`\tresult: ${ addNumber(100, 200) }`);
+        console.log(`\tresult: ${ addNumber(100) }`);
+        console.log(`\tresult: ${ addNumber() }`);
+        console.log(`\tresult: ${ addNumber(100, 200, 300) }`);
+
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample16</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        ul li {
+            box-sizing: border-box;
+            display: inline-block;
+
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+
+            text-align: center;
+            line-height: 30px;
+        }
+        ul li a {
+            text-decoration: none;
+        }
+        div#result {
+            box-sizing: border-box;
+
+            width: 460px;
+            height: 100px;
+            margin-left: 40px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample16.html</h1>
+
+    <hr>
+
+    <ul>
+        <li><a href="#" onclick="changeBg('red');">Red</a></li>
+        <li><a href="#" onclick="changeBg('green');">Green</a></li>
+        <li><a href="#" onclick="changeBg('blue');">Blue</a></li>
+    </ul>
+
+    <div id="result"></div>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // UI Event Types:
+        //  (1) For Mouse
+        //      - click / dblclick / mousedown / mousemove /
+        //        mouseover / mouseout / mouseup
+        //
+        //  (2) For Keyboard
+        //      - keydown / keypress / keyup
+        //
+        //  (3) For Document
+        //      - abort / error / load / resize / scroll / unload
+        //
+        //  (4) For Form
+        //      - blur / change / focus / reset / submit
+        // *************************************************** //
+
+        function changeBg(color) {
+            console.debug(`changeBg(${color}) invoked.`);
+
+            var div = document.querySelector('#result');
+            div.style.backgroundColor = color;
+        } // changeBg
+
+    </script>
+</body>
+
+</html>

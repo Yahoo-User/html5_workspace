@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+section {
+    border: 10px outset gold;
+
+    background-color: lightcyan;
+
+    display: flex;
+}
+section article {
+    width: 100px;
+    height: 100px;
+    border: 5px double red;
+
+    color: black;
+    background-color: lightgrey;
+
+    font-size: 50px;
+
+    /* 1. 텍스트 자식요소의 중앙정렬을 위한 flex 설정 (*******) */
+    display: flex;
+    /* 2. 자식요소 기본축 정렬 */
+    justify-content: center;
+    /* 3. 자식요소 반대축 정렬 */
+    align-items: center;
+}
+section article:nth-of-type(1) {
+    order: 2;
+}
+section article:nth-of-type(2) {
+    order: 3;
+}
+section article:nth-of-type(3) {
+    order: 1;
+}
+
+

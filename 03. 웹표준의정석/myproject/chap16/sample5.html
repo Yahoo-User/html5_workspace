@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample5</title>
+</head>
+
+<body>
+
+    <h1>sample5.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+        
+        var arr = new Array(3);
+        console.log(arr);
+
+        var resultArr = [];
+
+        // ---
+
+        // ================================================== //
+        // 1. `concat` method : Original Array *NOT* Changed
+        // ================================================== //
+
+        // var numArr = [ 1, 2, 3 ];
+        // var strArr = [ 'A', 'B', 'C' ];
+
+        // var resultArr = numArr.concat(strArr);
+        // var resultArr = strArr.concat(numArr);
+        // var resultArr = numArr.concat(numArr);
+        // var resultArr = strArr.concat(numArr, strArr, numArr, strArr);
+        // var resultArr = numArr.concat([], [ true, false ], [ .1, 3.14149 ]);
+
+
+        // ================================================== //
+        // 2. `join` method : Original Array *NOT* Changed
+        // ================================================== //
+
+        // var numArr = [ 1, 2, 3 ];
+
+        // join(separator?: string): string
+        // var resultJoin = numArr.join();
+        // var resultJoin = numArr.join('/');
+
+        // document.write('<br>', 'resultJoin:', resultJoin);
+
+
+        // ================================================== //
+        // 3. `push` method : Original Array *CHANGED*
+        // ================================================== //
+
+        // var resultArr = new Array();
+
+        // resultArr.push(1);
+        // resultArr.push(2, 3, 4);
+        // resultArr.push([ true, false]);
+        // resultArr.push({});
+        // resultArr.push({ name: 'Yoseph', age: 23 });
+
+
+        // ================================================== //
+        // 4. `unshift` method : Original Array *CHANGED*
+        // ================================================== //
+
+        // var resultArr = [ 1, 2, 3 ];
+
+        // resultArr.unshift(0);
+        // resultArr.unshift(-1, -2);
+        // resultArr.unshift(true, false);
+
+
+        // ================================================== //
+        // 5. `pop` method : Original Array *CHANGED*
+        // ================================================== //
+
+        // var resultArr = new Array(1,2,3,4,5,6,7);
+        
+        // var value = resultArr.pop();
+        // console.log('value:', value);
+
+        // for(let i=0;i<3;i++) {
+        //     var value = resultArr.pop();
+        //     console.log('value:', value);
+        // } // for
+
+
+        // ================================================== //
+        // 6. `shift` method : Original Array *CHANGED*
+        // ================================================== //
+
+        // var resultArr = new Array(1,2,3,4,5,6,7);
+
+        // var value = resultArr.shift();
+        // console.log('value:', value);
+
+        // for(let i=0;i<3;i++) {
+        //     var value = resultArr.shift();
+        //     console.log('value:', value);
+        // } // for
+
+
+        // ================================================== //
+        // 7. `splice` method : Original Array *CHANGED*
+        // ================================================== //
+
+        // var resultArr = new Array(1, 2, 3, 4, 5, 6, 7);
+
+        // 7-1. (method) Array<number>.splice(start: number, deleteCount?: number): number[]
+        // resultArr.splice(0, 2);
+        // resultArr.splice(3);
+        // resultArr.splice(0);
+
+        // 7-2. (method) Array.splice(start: number, deleteCount: number, ...items: number[]): number[]
+        // resultArr.splice(3, 2, 0);
+        // resultArr.splice(3, 2, 'A', 'B');
+        // resultArr.splice(3, 2, [ 'A', 'B', 'C' ]);
+        // resultArr.splice(3, 1, { name: 'Yoseph', age: 23} );
+
+
+        // ================================================== //
+        // 8. `slice` method : Original Array *NOT* Changed
+        // ================================================== //
+
+        var arr = [ 1, 2, 3, 4, 5, 6, 7 ];
+
+        // (method) Array<any>.slice(start?: number, end?: number): any[]
+        var resultArr = arr.slice();            // all
+        // var resultArr = arr.slice(0);           // all
+        // var resultArr = arr.slice(0, 3);        // [0: 3) : Half-open
+        // var resultArr = arr.slice(3);           // 3 ~ end
+
+
+        // ---
+
+        console.log('resultArr:', resultArr);
+
+        document.write('<p>', `1. The length of resultArr : ${ resultArr.length }`, '</p>');
+        resultArr.forEach(e => document.write(e, '<br>'));
+
+    </script>
+    
+</body>
+
+</html>

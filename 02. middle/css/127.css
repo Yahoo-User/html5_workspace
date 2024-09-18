@@ -1,0 +1,61 @@
+/* 버튼 비활성화 */
+ul li {
+    color: gray;
+}
+/* 버튼 활성화 */
+ul li.on {
+    color: blue;
+    cursor: pointer;
+
+    font-size: 20px;
+}
+section {
+    width: 300px;
+    height: 200px;
+    margin: 50px;
+    border: 10px solid lightslategray;
+
+    position: relative;
+
+    perspective: 600px;
+}
+/* 박스 비활성화 */
+section article {
+    width: 100%;
+    height: 100%;
+    border: 1px outset yellow;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 20px;
+    opacity: 0;
+
+    transition: .5s;
+    
+    transform: rotateY(-180deg);
+}
+section article:nth-of-type(1) {
+    background-color: red;
+}
+section article:nth-of-type(2) {
+    background-color: green;
+}
+section article:nth-of-type(3) {
+    background-color: blue;
+}
+/* 박스 활성화 */
+section article.on {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+
+

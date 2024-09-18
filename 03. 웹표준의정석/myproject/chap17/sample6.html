@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon5.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon5.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample6</title>
+
+    <style>
+        #cup {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample6.html</h1>
+
+    <hr>
+
+    <img src="https://picsum.photos/600/400" id="cup" width="600" height="400" alt="600x400">
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var cup = document.querySelector('#cup');
+        console.log('1. cup:', cup);
+
+        // ---
+
+        cup.onclick = function (e) {
+            console.clear(); console.group('onclick');
+            
+            console.debug('clicked...', e);
+
+            console.log('this:', this);
+            console.log('e.taregt:', e.target);
+            console.log('e.currentTarget:', e.currentTarget);
+
+            // ---
+
+            console.log('this.src:', this.src);
+            console.log('this.id:', this.id);
+            console.log('this.width:', this.width);
+            console.log('this.height:', this.height);
+            console.log('this.alt:', this.getAttribute('alt'));
+
+            // ---
+
+            console.log('e.target.src:', e.target.src);
+            console.log('e.target.id:', e.target.id);
+            console.log('e.target.width:', e.target.width);
+            console.log('e.target.height:', e.target.height);
+            console.log('e.target.alt:', e.target.getAttribute('alt'));
+
+            // ---
+
+            console.log('e.currentTarget.src:', e.currentTarget.src);
+            console.log('e.currentTarget.id:', e.currentTarget.id);
+            console.log('e.currentTarget.width:', e.currentTarget.width);
+            console.log('e.currentTarget.height:', e.currentTarget.height);
+            console.log('e.currentTarget.alt:', e.currentTarget.getAttribute('alt'));
+
+            // ---
+
+            console.log('cup.src:', cup.src);
+            console.log('cup.id:', cup.id);
+            console.log('cup.width:', cup.width);
+            console.log('cup.height:', cup.height);
+            console.log('cup.alt:', cup.getAttribute('alt'));
+
+            // ---
+
+            console.log('e.srcElement.src:', e.srcElement.src);
+            console.log('e.srcElement.id:', e.srcElement.id);
+            console.log('e.srcElement.width:', e.srcElement.width);
+            console.log('e.srcElement.height:', e.srcElement.height);
+            console.log('e.srcElement.alt:', e.srcElement.getAttribute('alt'));
+
+            // ---
+
+            console.groupEnd();
+        } // .onclick
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample11</title>
+</head>
+
+<body>
+
+    <h1>sample11.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // Function expressions:
+        //    (1) Anonymous Function
+        //    (2) Immediate Execution Function
+        //    (3) Arrow Function
+        // *************************************************** //
+
+        // (2) Immediate Execution Function:
+
+        // 1st. method
+        // (function () {
+        //     console.debug('anonymous function() invoked.');
+
+        //     var myName = prompt('Please enter your name.');
+        //     document.write('<h2>My name is ', myName , '.</h2>');
+        // })();
+
+        // ---
+
+        // 2nd. method
+        // (function () {
+        //     console.debug('anonymous function() invoked.');
+
+        //     var myName = prompt('Please enter your name.');
+        //     document.write('<h2>My name is ', myName , '.</h2>');
+        // } ());
+
+        // ---
+
+        // 3rd. method
+        (function (num1 = 0, num2 = 0) {
+            console.debug(`anonymous function(${num1}, ${num2}) invoked.`);
+
+            var sum = num1 + num2;
+            document.write('<h2>Sum is ', sum, '</h2>');
+        }) (100, 200);
+        // } (300, 400));
+        // })(300);
+        // }(300));
+        // }) ();
+        // } ());
+
+    </script>
+
+</body>
+
+</html>

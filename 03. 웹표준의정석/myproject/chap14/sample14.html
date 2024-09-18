@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample14</title>
+</head>
+
+<body>
+
+    <h1>sample14.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        var totalLines;
+
+        var totalAttendance = prompt('총 입장객은 몇 명인가요?.');
+        var attendancePerLine = prompt('한 줄에 몇 명씩 앉으시나요?');
+
+        // ---
+
+        if(totalAttendance % attendancePerLine == 0) {
+            totalLines = totalAttendance / attendancePerLine;
+        } else {
+            totalLines = totalAttendance / attendancePerLine + 1;
+        } // if-else
+
+        // ---
+
+        totalLines = parseInt(totalLines);
+        console.log('totalLines:', totalLines);
+
+        // ---
+
+        console.log( parseInt(null) );      // NaN
+        console.log( parseInt(null) );      // NaN
+        console.log( parseInt(undefined) ); // NaN
+        console.log( parseInt(Infinity) );  // NaN
+    </script>
+</body>
+
+</html>

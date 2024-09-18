@@ -1,0 +1,12 @@
+.tbl {
+    width: 300px;
+    border-collapse: collapse;          /* 셀 간의 경계선이 겹치지 않도록 설정 */
+    text-align: center;                 /* 텍스트 가운데 정렬 */
+}
+.tbl th, .tbl td {
+    border: 1px solid red;            /* 헤더와 데이터 셀에 경계선 추가 */
+    padding: 8px;                       /* 셀 안의 패딩 */
+}
+
+
+

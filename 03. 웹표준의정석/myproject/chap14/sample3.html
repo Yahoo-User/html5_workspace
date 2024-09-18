@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample3</title>
+</head>
+
+<body>
+
+    <h1>sample3.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // **************************************** //
+        //  Data Types
+        // **************************************** //
+
+        // 1. Primitive Types : number, string, boolean
+        var birthYear = 2022;           // number
+        var greeting = 'hello';         // string
+        var isEmpty = true;             // boolean
+
+        console.log(`birthYear: ${typeof birthYear}, greeting: ${typeof greeting}, isEmpty: ${typeof isEmpty}`);
+
+
+        // 2. Complext Types : array, object
+        var numberArray = [ 1, 2, 3 ];              // object
+        var date = new Date();                      // object
+        var obj = { name: 'Yoseph', age: 23 };      // object
+
+        console.log(`numberArray: ${typeof numberArray}, date: ${typeof date}, obj: ${typeof obj}`);
+
+
+        // 3. Special Types : undefined, null, NaN, Infinity
+        var age;                            // undefined
+        var yourName = null;                // object
+        var result = 1 * 'abc';             // NaN
+
+        console.log(`Types - age: ${typeof age}, \tyourName: ${typeof yourName}, \tresult: ${typeof result}`);
+        console.log(`Value - age: ${age}, \tyourName: ${yourName}, \tresult: ${result}`);
+        
+        var float = Infinity * 100;         // +Infinity
+        // var float = -Infinity * 100;        // -Infinity
+
+        console.log(`float: ${typeof float}, ${float}`);
+    </script>
+
+</body>
+
+</html>

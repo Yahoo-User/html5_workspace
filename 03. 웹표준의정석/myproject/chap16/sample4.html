@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample4</title>
+</head>
+
+<body>
+
+    <h1>sample4.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var arr = [ 'one', 'two', 'three', 'four' ];
+        console.log('arr:', arr);
+
+        // ---
+        
+        // Case 1
+
+        for(let i=0; i<arr.length; i++) {
+            document.write(arr[i], '<br>');
+        } // classical for
+
+        // ---
+        
+        // Case 2
+
+        // for(let index in arr) {
+        //     document.write(arr[index], '<br>');
+        // } // for-in
+
+        // ---
+        
+        // Case 3
+
+        // for(let element of arr) {
+        //     document.write(element, '<br>');
+        // } // for-of (enhanced for)
+
+        // ---
+
+        // Case 4
+
+        // arr.forEach(e => document.write(e, '<br>'));
+
+    </script>
+
+</body>
+
+</html>

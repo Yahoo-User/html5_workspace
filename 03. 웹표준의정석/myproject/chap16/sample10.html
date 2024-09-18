@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample10</title>
+</head>
+
+<body>
+
+    <h1>sample10.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+        
+        var seed = prompt('전체 응모자 수를 입력하세요', '0');
+        var pickedNumber = Math.floor( Math.random() * seed ) + 1;
+
+        document.write('1. 전체응모자수 : ', seed, '<br>');
+        document.write('2. 당첨번호 : ', pickedNumber);
+    </script>
+
+</body>
+
+</html>

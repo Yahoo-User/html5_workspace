@@ -1,0 +1,49 @@
+/* Sequence Selector */
+
+/* 
+    수열의 n 매개변수 규칙:
+        1. 수식 뒤에 +1/-1 이 `있으면`, n = 0부터 시작 (***)
+        2. 수식 뒤에 +1/-1 이 `없으면`, n = 1부터 시작 (***)
+*/
+
+/* ul li:nth-of-type(n) { */
+/* ul li:nth-of-type(n+1) { */
+/* ul li:nth-of-type(n-1) { */
+/* ul li:nth-of-type(2n) { */
+ul li:nth-of-type(2n+1) {
+/* ul li:nth-of-type(2n-1) { */
+/* ul li:nth-of-type(3n) { */
+/* ul li:nth-of-type(3n+1) { */
+/* ul li:nth-of-type(3n-1) { */
+    border: 5px solid blue;
+}
+
+ul li:last-child {
+    border: 10px ridge gold;
+}
+
+/* ------------------ */
+
+/* 1. `Live Server` extension 이 body 태그의 가장 마지막에 넣는 <script> 태그로 인해서, 효과가 없음 */
+/* 2. 그러나 `open in browser` extension 을 이용해서, 순수하게 웹브라우저에서 문서를 열어볼 것! */
+h2:last-child {
+    border: 10px outset gold;
+}
+
+h2:last-of-type {
+    border: 10px outset aqua;
+}
+
+/* ------------------ */
+
+/* p:nth-of-type(even) {
+p:nth-child(even) {
+    border: 10px ridge violet;
+} */
+
+p:nth-of-type(odd) {
+/* p:nth-child(odd) { */
+    border: 10px double brown;
+}
+
+

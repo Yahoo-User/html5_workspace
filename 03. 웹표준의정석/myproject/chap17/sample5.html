@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon5.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon5.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample5</title>
+
+    <style>
+        #cup {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample5.html</h1>
+
+    <hr>
+
+    <img src="https://picsum.photos/600/400" id="cup">
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var cup = document.querySelector('#cup');
+        console.log('1. cup:', cup);
+
+        // ---
+
+        cup.onclick = changePic;
+
+        // ---
+
+        function changePic(e) {
+            console.clear(); console.debug('changePic(e) invoked.', e);
+            console.log('this:', this);
+            console.log('e.currentTarget:', e.currentTarget);
+            console.log('e.target:', e.target);
+
+            this.src = 'https://picsum.photos/300/200';
+            // e.currentTarget.src = 'https://picsum.photos/400/400';
+            // cup.setAttribute('src', 'https://picsum.photos/500/500');
+        } // changePic
+    </script>
+
+</body>
+
+</html>

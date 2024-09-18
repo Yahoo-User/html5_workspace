@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* Comments */
+
+em, code, strong {
+    color: red;
+}

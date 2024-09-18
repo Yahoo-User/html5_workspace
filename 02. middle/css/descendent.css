@@ -1,0 +1,4 @@
+/* Descendent Selector */
+p strong {
+    border: 5px solid blue;
+}

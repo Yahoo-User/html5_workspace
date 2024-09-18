@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+section {
+    border: 10px outset gold;
+
+    background-color: lightcyan;
+
+
+    /* 부모 요소에만 display: flex; 를 지정하고, 자식 요소에 크기(너비/높이)를 지정하지 않으면,
+        - 자식 요소는 display: inline-block 으로 설정되어,
+        - 자식 요소의 크기는 콘텐츠 크기로 설정됨(inline) */
+
+    display: flex;
+}
+section article {
+    width: 400px;
+    border: 1px solid gray;
+
+    background-color: aqua;
+
+    box-sizing: border-box;
+
+    font-size: 50px;
+
+
+    /* 부모 요소에만 display: flex; 를 지정하고, 자식 요소에 크기(너비/높이)를 지정하지 않으면,
+        - 자식 요소는 display: inline-block 으로 설정되어,
+        - 자식 요소의 크기는 콘텐츠 크기로 설정됨(inline) */
+
+    display: flex;
+}
+section article:nth-of-type(1) {
+    /*  `flex` : 각 자식요소의 전체 너비값 비율 조정 */
+    flex: 2
+}
+section article:nth-of-type(2) {
+    /*  `flex` : 각 자식요소의 전체 너비값 비율 조정 */
+    flex: 3
+}
+section article:nth-of-type(3) {
+    /*  `flex` : 각 자식요소의 전체 너비값 비율 조정 */
+    flex: 1
+}
+
+

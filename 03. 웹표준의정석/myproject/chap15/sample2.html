@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample2</title>
+</head>
+
+<body>
+
+    <h1>sample2.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // 1. variable without `var` has 'global' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          XX
+        // 2. `var` variable has 'function' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          OK
+        // 3. `let` variable has 'block' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // 4. `const` variable has 'block' scope.
+        //      - Re-assignment     XX
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // *************************************************** //
+
+        var x = 10;
+
+        // ---
+
+        function displayNumber() {
+            console.log(`x is ${x}`);
+            console.log(`y is ${y}`);
+
+            var y = 20;                 // `var` variable's "hoisting" (***)
+        } // displayNumber
+
+        // ---
+
+        // function displayNumber() {
+        //     var y;                   // hoisting by java interpreter.
+
+        //     console.log(`x is ${x}`);
+        //     console.log(`y is ${y}`);
+
+        //     y = 20;
+        // } // displayNumber
+
+        // ---
+
+        displayNumber();
+
+    </script>
+
+</body>
+
+</html>

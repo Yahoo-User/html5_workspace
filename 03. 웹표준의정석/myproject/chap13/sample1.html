@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon.ico" type="image/x-icon">
+
+    <title>sample1</title>
+
+    <style>
+        #heading {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>sample1.html</h1>
+
+    <hr>
+
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">위 텍스트를 클릭해 보세요.</p>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        var heading = document.querySelector('#heading');
+        console.log('heading:', heading);
+
+        // ---------
+
+        heading.onclick = function (e) {
+            console.clear(); console.log('onclicked ...');
+            console.log('this:', this);                     // heading
+
+            heading.style.color = 'red';                 // OK
+            // this.style.color = 'red';                    // OK
+            // e.currentTarget.style.color = 'red';         // OK
+        };  // .onclick
+
+        // ---------
+
+        // heading.addEventListener('click', function (e) {
+        //     console.clear(); console.log('onclicked ...');
+        //     console.log('this:', this);                         // heading
+
+        //     heading.style.color = 'blue';                    // OK
+        //     // this.style.color = 'red';                        // OK
+        //     // e.currentTarget.style.color = 'red';             // OK
+        // }); // .addEventListener
+
+        // ---------
+
+        // heading.addEventListener('click', e => {
+        //     console.clear(); console.log('clicked ...');
+        //     console.log('this:', this);                         // window (***)
+
+        //     heading.style.color = 'purple';                     // OK
+        //     // this.style.color = 'purple';                        // XX (**)
+        //     // e.currentTarget.style.color = 'purple';             // OK
+        // }); // .addEventListener
+    </script>
+
+</body>
+
+</html>

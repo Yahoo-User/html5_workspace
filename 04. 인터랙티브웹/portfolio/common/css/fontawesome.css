@@ -1,0 +1,46 @@
+/* Rules for sizing the icon. */
+.fab.md-19 { font-size: 19px; }      /* default */
+.fab.md-20 { font-size: 20px; }
+.fab.md-22 { font-size: 22px; }
+.fab.md-24 { font-size: 24px; }
+.fab.md-36 { font-size: 36px; }
+.fab.md-48 { font-size: 48px; }
+.fab.md-96 { font-size: 96px; }
+
+.fas.md-19 { font-size: 19px; }      /* default */
+.fas.md-20 { font-size: 20px; }
+.fas.md-22 { font-size: 22px; }
+.fas.md-24 { font-size: 24px; }
+.fas.md-36 { font-size: 36px; }
+.fas.md-48 { font-size: 48px; }
+.fas.md-96 { font-size: 96px; }
+
+/* Rules for using icons as black on a light background. */
+.fab.md-dark { color: rgba(0, 0, 0, 0.54); }
+.fab.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.fas.md-dark { color: rgba(0, 0, 0, 0.54); }
+.fas.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.fab.md-light { color: rgba(255, 255, 255, 1); }
+.fab.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.fas.md-light { color: rgba(255, 255, 255, 1); }
+.fas.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* To set a custom icon color, define a CSS rule specifying the desired color for the font: */
+.fab.cl-orange  { color: orange; }
+.fab.cl-red     { color: red; }
+.fab.cl-blue    { color: blue; }
+.fab.cl-gray    { color: gray; }
+.fab.cl-purple  { color: purple; }
+.fab.cl-brown   { color: brown; }
+
+.fas.cl-orange  { color: orange; }
+.fas.cl-red     { color: red; }
+.fas.cl-blue    { color: blue; }
+.fas.cl-gray    { color: gray; }
+.fas.cl-purple  { color: purple; }
+.fas.cl-brown   { color: brown; }
+

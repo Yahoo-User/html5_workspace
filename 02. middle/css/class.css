@@ -1,0 +1,11 @@
+/* Class Selector */
+
+p.text1 {
+/* .text1 { */
+    border: 5px double blue;
+}
+
+p.text2 {
+/* .text2 { */
+    border: 5px double brown;
+}

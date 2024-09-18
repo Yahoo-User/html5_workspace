@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample2</title>
+</head>
+
+<body>
+
+    <h1>sample2.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // --------
+
+        var currentYear = 2022;
+        var birthYear;              // undefined
+        var age;                    // undefined
+
+        console.log(`currentYear: ${currentYear}, birthYear: ${birthYear}, age: ${age}, typeof age: ${typeof age}`);
+
+        // --------
+
+        birthYear = prompt('태어난 연도를 입력하세요. (YYYY)', 1991);
+        console.log(`birthYear: ${birthYear}`);
+
+        // If birthYear is `null` or `undefined` or `empty string`, birthYear == 0
+        // Then if birthYear is `abc`, what's result ?  -> `NaN` (Not a Number) (***)
+        age = currentYear - birthYear + 1;
+
+        document.write(currentYear, '년 현재, ');
+        document.write(birthYear, '년에 태어난 사람의 나이는 ', age, '세 입니다.');
+    </script>
+
+</body>
+
+</html>

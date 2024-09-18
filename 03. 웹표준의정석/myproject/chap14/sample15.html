@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample15</title>
+</head>
+
+<body>
+
+    <h1>sample15.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var sum = 0;
+
+        sum = sum + 1;
+        sum = sum + 2;
+        sum += 3;
+        sum += 4;
+        sum += 5;
+
+        console.log(`1. sum: ${sum}`);
+
+        // ---
+
+        var sum = 0;
+
+        for(var index = 1; index <= 5; ++index) {
+            sum = sum + index;
+            // sum += index;
+        } // classical for
+
+        console.log(`2. sum: ${sum}`);
+
+
+        // ----------------------------- //
+        // Traverse of an Array
+        // ----------------------------- //
+
+        var arr = [ 1, 2, 3 ];
+
+        // ---
+
+        for(var index=0; index < arr.length; index++) {
+            console.log( arr[index] );
+        } // classical for
+
+        // ---
+
+        for(var element of arr) {
+            console.log( element );
+        } // for-of (enhanced for)
+
+        // ---
+
+        for(var index in arr) {
+            console.log( arr[index] );
+        } // for-in
+
+        // ---
+
+        arr.forEach(el => console.log( el ));
+
+
+        // ----------------------------- //
+        // Traverse of an Object
+        // ----------------------------- //
+
+        var person = { name: 'Yoseph', age: 23 };
+        console.log(person);
+
+        // ---
+
+        // console.log(person.length);                      // XX : undefined
+
+        // ---
+
+        // for(var i = 0; i < person.length; i++) {         // XX
+        //     console.log( person[i] );
+        // } // classical for
+
+        // ---
+
+        for(var key in person) {                            // OK
+            console.log(`key: ${key}, value: ${ person[key] }`);
+        }   // for-in
+
+        // ---
+
+        // for (var value of person) {                      // XX
+        //     console.log(value);
+        // } // for-of (enhanced for)
+
+        // ---
+
+        // console.log(person.forEach);                        // XX : undefined
+
+    </script>
+
+</body>
+
+</html>

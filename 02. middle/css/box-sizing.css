@@ -1,0 +1,19 @@
+article {
+    width: 100px;
+    height: 100px;
+
+    border: 1px solid purple;
+}
+article:nth-of-type(1) {
+    padding: 0px;
+
+    /* box-sizing: border-box; */
+}
+article:nth-of-type(2) {
+    padding: 30px;
+
+    /* default */
+    /* box-sizing: content-box; */
+
+    box-sizing: border-box;
+}

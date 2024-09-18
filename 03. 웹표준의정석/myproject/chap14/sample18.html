@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon" crossorigin="anonymous">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample18</title>
+
+    <style>
+        div {
+            display: inline-block;
+
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid purple;
+
+            line-height: 2;
+        }
+
+        div h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample18.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var dansu = parseInt(prompt('단수를 입력하세요', '1'));
+
+        if (!Number.isNaN(dansu) && dansu <= 9) {
+
+            for (var i = 1; i <= 9; i++) {
+
+                document.write('<div>');
+                document.write(`<h3>${i} 단</h3>`);
+
+                for (var j = 1; j <= 9; j++) {
+                    document.write(`${i} * ${j} = ${i * j}`, '<br>');
+                } // inner-for
+
+                document.write('</div>');
+
+                if (i === dansu) break;
+            } // outer-for
+
+        } else
+            alert('Invalid dansu.');
+
+    </script>
+</body>
+
+</html>

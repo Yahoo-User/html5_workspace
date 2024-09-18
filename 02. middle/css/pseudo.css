@@ -1,0 +1,26 @@
+/* Pseudo Selector */
+
+h2 {
+    border: 10px solid blue;
+}
+
+/* ------------------- */
+
+/* 1. `:hover` Pseudo Event Selector  */
+h2:hover {
+    border: 10px outset gold;
+}
+
+/* ------------------- */
+
+/* 2. `::before` Pseudo Element Selector */
+h2::before {
+    content: "<p>Before Contents</p>";          /* 주의: 태그는 인정안됨. 그냥 컨텐츠(텍스트)임. */
+    color: green;
+}
+
+/* 3. `::after` Pseudo Element Selector */
+h2::after {
+    content: "<p>After Contents</p>";           /* 주의: 태그는 인정안됨. 그냥 컨텐츠(텍스트)임. */
+    color: red;
+}

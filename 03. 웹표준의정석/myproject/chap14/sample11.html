@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample11</title>
+</head>
+
+<body>
+
+    <h1>sample11.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+
+        // **************************************************** //
+        //  Bit-wise Logical Operators: &, |, ~
+        // **************************************************** //
+        var number = 87;            // Radix 10 
+        // var number = 0x57;          // Radix 16
+        // var number = 0127;          // Radix  8
+        // var number = 0b1010111;     // Radix  2
+
+        // Number.toString(radix)
+        console.log(`1. Radix 16: ${ number.toString(16) }`);
+        console.log(`2. Radix 10: ${ number.toString(10) }`);
+        console.log(`3. Radix  8: ${ number.toString(8) }`);
+        console.log(`4. Radix  2: ${ number.toString(2) }`);
+
+        
+        // ---
+        // Bit Masking
+        // ---
+        var bit_mask = 0b1111111;           // For checking current bits.
+        var bit_mask = 0b0000000;           // For bit initialization.
+        var bit_mask = 0b0000100;           // For checking whether the specified bit ON or OFF (Bit Detection)
+
+        // ---
+
+        var result = number & bit_mask;
+        console.log(`>>> result: ${ result.toString(2) }`);
+
+        if(result > 0) {
+            console.log('\t+ The specified bit turned ON');
+        } else {
+            console.log('\t+ The specified bit turned OFF');
+        } // if-else
+    </script>
+
+</body>
+
+</html>

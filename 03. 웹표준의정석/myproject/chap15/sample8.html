@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample8</title>
+</head>
+
+<body>
+
+    <h1>sample8.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // 1. variable without `var` has 'global' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          XX
+        // 2. `var` variable has 'function' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    OK
+        //      - Hoisting          OK
+        // 3. `let` variable has 'block' scope.
+        //      - Re-assignment     OK
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // 4. `const` variable has 'block' scope.
+        //      - Re-assignment     XX
+        //      - Re-declaration    XX
+        //      - Hoisting          XX
+        // *************************************************** //
+
+        const currentYear = 2022;
+
+        // ---
+
+        // currentYear = 2100;             // XX : Re-assignment NOT permitted.
+
+        // ---
+
+        // const currentYear = 2200;       // XX : Re-declaration NOT permitted.
+
+        console.log(`currentYear: ${currentYear}`);
+
+    </script>
+</body>
+
+</html>

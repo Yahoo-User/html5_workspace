@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sample34</title>
+
+    <style>
+        em {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Show a <em>&lt;input="range"&gt;</em> field</h1>
+
+    <hr>
+
+    <form>
+
+        <!-- label 태그의 for 속성은, 연결시킬 태그에 지정된 id 값을 지정하면,
+        label 클릭시, focus가 연결된 태그에 설정됨. -->
+
+        <label for="vol">Volume (between 0 and 50):</label>
+        <input type="range" id="vol" name="vol" min="0" max="50">
+        
+        <input type="submit">
+
+    </form>
+
+
+
+</body>
+
+</html>

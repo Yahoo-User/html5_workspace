@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample13</title>
+</head>
+
+<body>
+
+    <h1>sample13.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ----------------- //
+        // 1. number(integer)   (OK)
+        // ----------------- //
+
+        var value = 1;
+        // var value = '1';        // XX
+
+        switch(value) {
+            case 1  : console.log(1); break;
+            case 2  : console.log(2); break;
+            // case 1  : console.log(1);
+            // case 2  : console.log(2);
+
+            case 3  : console.log(3); break;
+
+            default : alert(`1. No match found. ${value}`);
+        } // switch
+
+
+        // ----------------- //
+        // 2. number(float)     (OK)
+        // ----------------- //
+
+        var value = .1;
+        var value = .2;
+        // var value = '.2';       // XX
+
+        switch(value) {
+            case .1 : console.log(.1); break;
+            case .2 : console.log(.2); break;
+            case .3 : console.log(.3); break;
+
+            default : alert(`2. No match found. ${value}`);
+        } // swtich
+
+
+        // ----------------- //
+        // 3. string    (OK)
+        // ----------------- //
+
+        var value = 'Yoseph';
+
+        switch(value) {
+            case 'Yoseph'   : console.log('Yoseph'); break;
+            case 'Trinity'  : console.log('Trinity'); break;
+            case 'Pyramide' : console.log('Pyramide'); break;
+
+            default         : alert(`3. No match found. ${value}`);
+        } // switch
+
+
+        // ----------------- //
+        // 4. boolean   (OK)
+        // ----------------- //
+
+        var value = true;
+        var value = false;
+        // var value = null;            // XX
+        // var value = undefined;       // XX
+
+        switch(value) {
+            case true   : console.log(true); break;
+            case false  : console.log(false); break;
+
+            default     : alert(`4. No match found. ${value}`);
+        } // switch
+
+
+        // ----------------- //
+        // 5. array     (XX)
+        // ----------------- //
+
+        // var value = [];
+        // // var value = [1];
+
+        // switch(value) {
+        //     case []     : console.log(value); break;
+        //     case [1]    : console.log(value); break;
+        //     case [1,2]  : console.log(value); break;
+        //     case [1, 'a', true] : console.log(value); break;
+        // 
+        //     default     : alert(`5. No match found. ${value}`);
+        // } // switch
+
+
+        // ----------------- //
+        // 6. object     (XX)
+        // ----------------- //
+
+        // var value = {};
+        // var value = { name: 'Yoseph' };
+
+        // switch(value) {
+        //     case {} : console.log(value); break;
+        //     case { name: 'Yoseph' } : console.log(value); break;
+        //     case value : console.log(value); break;
+            
+        //     default : alert(`7. No match found. ${value}`);
+        // } // switch
+
+    </script>
+</body>
+
+</html>

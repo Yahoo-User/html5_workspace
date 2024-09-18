@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon5.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon5.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample7</title>
+</head>
+
+<body>
+
+    <h1>sample7.html</h1>
+
+    <hr>
+
+    <img src="https://picsum.photos/id/1067/300/300" alt="600x400" id="cover">
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var cover = document.getElementById('cover');
+        console.log('1. cover:', cover);
+
+        // ---
+
+        cover.addEventListener('mouseenter', changeNewPic);
+
+        // Event Capturing & Bubbling (default: Bubbling) :
+        // (1) Capturing : transfer event from parent to shilds. (parent -> childs)
+        // (2) Bubbling  : transfer event from child to parent.  (child  -> parent)
+
+        // cover.addEventListener('mouseout', function changeOriginPic(e), false);         // 1st. method
+
+        // cover.addEventListener('mouseout', function changeOriginPic(e) {                // 2nd. method
+        cover.addEventListener('mouseout', function (e) {                               // 3rd. method
+            console.clear(); console.group('changeOriginPic');
+
+            console.log('e.type:', e.type);
+            console.log('this:', this);
+
+            this.setAttribute('src', 'https://picsum.photos/id/1067/300/300');
+
+            console.groupEnd();
+        }, false);
+
+        // ---
+
+        function changeNewPic(e) {
+            console.clear(); console.group('changeNewPic');
+
+            console.log('e.type:', e.type);
+            console.log('this:', this);
+
+            this.src = 'https://picsum.photos/id/1068/300/300';
+
+            console.groupEnd();
+        } // changeNewPic
+
+        // ---
+
+        // function changeOriginPic(e) {
+        //     console.clear(); console.group('changeOriginPic');
+
+        //     console.log('e.type:', e.type);
+        //     console.log('this:', this);
+
+        //     this.setAttribute('src', 'https://picsum.photos/id/1067/300/300');
+
+        //     console.groupEnd();
+        // } // changeOriginPic
+
+    </script>
+    
+</body>
+
+</html>

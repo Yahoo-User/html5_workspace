@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon5.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon5.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample1</title>
+</head>
+
+<body>
+
+    <h1>sample1.html</h1>
+
+    <hr>
+
+    <button onclick="innertext();">innerText로 표시하기</button>
+    <button onclick="innerhtml();">innerHTML료 표시하기</button>
+
+    <h1>현재시간</h1>
+    <div id="current"></div>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        var now = new Date();
+        console.log('now:', now);
+
+        // ---
+
+        function innertext() {
+            console.debug('innerText() invoked.');
+            document.getElementById('current').innerText = now;
+        } // innertext
+
+        // ---
+
+        function innerhtml() {
+            console.log('innerHTML() invoked.');
+            document.getElementById('current').innerHTML = `<em>${now}</em>`;
+        } // innerhtml
+
+    </script>
+
+</body>
+
+</html>

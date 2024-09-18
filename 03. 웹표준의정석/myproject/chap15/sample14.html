@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample14</title>
+</head>
+
+<body>
+
+    <h1>sample14.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // Function expressions:
+        //    (1) Anonymous Function
+        //    (2) Immediate Execution Function
+        //    (3) Arrow Function
+        // *************************************************** //
+
+        // (3) Arrow Function
+
+        // Case 3 : With two and more parameters:
+
+        // const addNumbers = function (a, b) {
+        //     return a + b;
+        // };  // addNumbers
+
+        // ---
+
+        const addNumbers = (a, b) => { return a + b; }
+        // const addNumbers = (a, b) => a + b;
+        // const addNumbers = (a, b = 0) => a + b;
+        // const addNumbers = (a = 0, b) => a + b;
+        // const addNumbers = (a = 0, b = 0) => a + b;
+
+        // ---
+
+        // const addNumbers = (...numbers) => {
+        //     var sum = 0;
+        //     for (let number of numbers) sum += number;
+
+        //     return sum;
+        // };  // addNumbers
+
+        // ---
+
+        document.write('<h2>', addNumbers(10, 20, 30), '</h2>');
+        document.write('<h2>', addNumbers(10, 20), '</h2>');
+        document.write('<h2>', addNumbers(10), '</h2>');
+        document.write('<h2>', addNumbers(), '</h2>');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sample17</title>
+
+    <style>
+        em {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The <em>&lt;input="checkbox"&gt;</em> element</h1>
+
+    <hr>
+
+    <form>
+        <!-- label 태그의 for 속성은, 연결시킬 태그에 지정된 id 값을 지정하면,
+        label 클릭시, focus가 연결된 태그에 설정됨. -->
+
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" checked>
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+
+        <input type="submit">
+    </form>
+
+
+
+</body>
+
+</html>

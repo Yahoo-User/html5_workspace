@@ -1,0 +1,339 @@
+header {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+header div.inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0px auto;
+
+    position: relative;
+
+    /* border: 3px double red; */
+}
+header div.inner h1 {
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+}
+header div.inner h1 a {
+    /* font: Not Supported in HTML5. */
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Ubuntu';
+    line-height: 1;
+
+    color: #444;
+}
+header div.inner .util {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+header div.inner .util li {
+    float: left;
+}
+header div.inner .util li a {
+    display: block;
+
+    padding: 0px 5px;
+
+    /* font: Not Supported in HTML5. */
+    font-size: 16px;
+
+    color: #777;
+}
+header div.inner #gnb {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+header div.inner #gnb li {
+    float: left;
+}
+header div.inner #gnb li a {
+    display: block;
+
+    /* font: Not Supported in HTML5. */
+    font-weight: bold;
+    font-size: 17px;
+
+    color: #555;
+    padding: 20px 40px;
+
+    /* 
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    */
+
+    transition: .5s;
+}
+header div.inner #gnb li a:hover {
+    color: white;
+    background-color: #555;
+}
+
+/* ------- */
+
+figure {
+    width: 100%;
+
+    /* 브라우저 전체높이에서 120px(header영역높이)를 뺀, 나머지를 높이로 설정 */
+    /* height: (100vh - header's height), vh: Viewport Height */
+    /* calc() : * 주의* 괄호안에서 연산자 사용시, 연산자 양 옆에 무조건 한 칸 띄워야 함. */
+    height: calc(100vh - 120px);
+
+    padding-top: 250px;
+    
+    background-color: black;
+
+    position: relative;
+
+    overflow: hidden;
+}
+figure video {
+    width: 100%;
+    height: 100%;
+
+    /* object-fit:
+        This is used to specify how an <img> or <video> should be resized to fit its container.
+        Syntax: fill | contain | cover | none | scale-down */
+
+    /* cover:
+        The replaced content is sized to maintain its `aspect ratio`
+        while filling the element's `entire content box`:
+
+        its concrete object size is resolved as a cover constraint against the element’s used width and height. */
+
+    object-fit: cover;
+
+    opacity: .7;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+figure div.inner {
+    width: 1180px;
+    margin: 0px auto;
+
+    position: relative;
+}
+figure div.inner h1 {
+    margin-bottom: 30px;
+
+    font-weight: normal;
+    font-size: 60px;
+
+    color: white;
+}
+figure div.inner p {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    /* font-weight: bold; */
+    text-align: left;
+    letter-spacing: 1px;
+
+    color: #bbb;
+}
+figure div.inner a {
+    display: block;
+
+    width: 300px;
+    height: 30px;
+    border: 1px dotted #999;
+
+    color: #ccc;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* 
+        transition-property: all;
+        transition-duration: .3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    */
+
+    transition: .3s;
+}
+figure div.inner a:hover {
+    color: white;
+    background-color: #999;
+    opacity: .5;
+}
+
+/* ------- */
+
+section {
+    width: 100%;
+    padding: 80px 0px;
+
+    /* border: 5px double red; */
+}
+section div.inner {
+    width: 1180px;
+    margin: 0px auto;
+
+    /* border: 5px double blue; */
+}
+section div.inner h1 {
+    margin-bottom: 50px;
+
+    /* font: Not Supported in HTML5. */
+
+    font-size: 30px;
+    /* font-weight: bolder; */
+    /* line-height: 1; */
+    text-align: center;
+
+    color: #555;
+}
+section div.inner div.wrap {
+    width: 100%;
+
+    /* border: 5px double green; */
+}
+section div.inner div.wrap::after {
+    content: '';
+
+    /* 아래 두개의 속성으로, <div>태그가 `자식요소의 높이값`을 인식할 수 있도록 해줌. */
+    /*  1. 강제로 `display: block;`으로 해야만, 인식 가능. */
+    /*  2. 더불어 `float: both` 로 float 속성을 clear 시킴으로써, 자동인식 가능. */
+    display: block;             /* 가상요소(::after)이기 때문에, inline임. 이를 block으로 강제변환 (***) */
+    clear: both;                /* (***) */
+}
+section div.inner div.wrap article {
+    width: 280px;
+    margin-right: 20px;
+
+    float: left;
+}
+section div.inner div.wrap article:last-child {
+    margin-right: 0px;
+}
+section div.inner div.wrap div.pic {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+
+    background-color: #333;
+
+    position: relative;
+    overflow: hidden;
+}
+section div.inner div.wrap div.pic img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+section div.inner div.wrap h2 {
+    margin-bottom: 10px;
+}
+section div.inner div.wrap h2 a {
+    /* font: Not Supported in HTML5. */
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #555;
+}
+section div.inner div.wrap p {
+    /* font: Not Supported in HTML5. */
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Arial;
+    
+    color: #777;
+}
+
+/* ------- */
+
+footer {
+    width: 100%;
+    padding: 100px 0px;
+    border-top: 1px solid #888;
+
+    background-color: #333;
+
+    /* border: 5px double red; */
+}
+footer div.inner {
+    width: 1180px;
+    margin: 0px auto;
+}
+footer div.inner div.upper {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #777;
+}
+footer div.inner div.upper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+footer div.inner div.upper h1 {
+    float: left;
+
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial;
+
+    color: #888;
+}
+footer div.inner div.upper ul {
+    float: right;
+}
+footer div.inner div.upper ul li {
+    float: left;
+
+    margin-left: 10px;
+}
+footer div.inner div.upper ul li a {
+    color: #888;
+
+    font-size: 16px;
+    font-weight: bold;
+    /* font-family: Arial; */
+}
+footer div.inner div.lower {
+    width: 100%;
+    padding-top: 20px;
+}
+footer div.inner div.lower address {
+    width: 100%;
+    margin-bottom: 20px;
+
+    color: #777;
+
+    font-size: 19px;
+    line-height: 1.3;
+}
+footer div.inner div.lower p {
+    width: 100%;
+
+    color: #777;
+
+    font-size: 19px;
+    /* font-family: Arial; */
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

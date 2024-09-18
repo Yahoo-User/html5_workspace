@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+p#txt {
+    font-size: 100px;
+    font-family: 'Monoton', cursive;
+}
+
+/* ------------------ */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Permanent+Marker&display=swap');
+
+p#txt {
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
+} */

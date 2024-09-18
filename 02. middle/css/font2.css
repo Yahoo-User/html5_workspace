@@ -1,0 +1,36 @@
+html {
+    font-size: 16px;
+}
+article {
+    font-size: 40px;
+}
+article h2 {
+    /* 1. By fixed pixel size, */
+    font-size: 60px;
+
+    /* 2. By `html` tag font-size, 3 times(48px) */
+    /* font-size: 3rem; */
+
+    /* 3. By `parent` tag article, 1 times(120px) */ 
+    /* font-size: 3em; */
+}
+article p {
+    /* 1. By fixed pixel size, */
+    font-size: 30px;
+
+    /* 2. By `html` tag font-size, 1 times(16px) */
+    /* font-size: 1rem; */
+
+    /* 3. By `parent` tag article, 1 times(40px) */ 
+    /* font-size: 1em; */
+}
+article a {
+    /* 1. By fixed pixel size, */
+    font-size: 15px;
+
+    /* 2. By `html` tag font-size, .8 times(12.8px) */
+    /* font-size: .8rem; */
+
+    /* 3. By `parent` tag article, 1 times(32px) */ 
+    /* font-size: .8em; */
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>sample3</title>
+
+    <link rel="stylesheet" href="./css/kbd.css">
+    <link rel="stylesheet" href="./css/tbl.css">
+
+    <style>
+        h1  {text-align: center;}
+        div {text-align: center;}
+    </style>
+</head>
+
+<body>
+    <h3>/sample3.html</h3>
+    <hr>
+    
+    <kbd>021. &#60;button&#62; Defines a clickable button.</kbd><p/>
+
+        <button type="button">Click Me</button>
+
+        <hr>
+    
+
+    <kbd>022. &#60;canvas&#62; Used to draw graphics, on the fly, via scripting. (usually JavaScript)</kbd><p/>
+
+        <canvas id="myCanvas">
+            Your browser does not support the canvas tag.
+        </canvas>
+            
+        <script>
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = "#FF0000";
+
+            // ctx.fillRect(leftPos, rightPos, width, height)
+            ctx.fillRect(10, 10, 70, 70); 
+        </script>
+
+        <hr>
+    
+
+    <kbd>023. &#60;caption&#62; Defines a table caption.</kbd><p/>
+
+        <table class="tbl">
+            <caption>Monthly savings #1</caption>
+
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+
+            <caption>Monthly savings #2</caption>
+        </table>
+
+        <hr>
+
+    
+    <kbd>024. &#60;center&#62; Defines centered text. Not supported in HTML5. Use CSS instead.</kbd><p/>
+
+        <h1>This is a heading</h1>
+        <div>This is a div.</div>
+
+        <hr>
+
+    
+    <kbd>025. &#60;cite&#62; Defines the title of a work.</kbd><p/>
+
+        <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+        <hr>
+
+    
+    <kbd>026. &#60;code&#62; Defines a piece of computer code.</kbd><p/>
+
+        <p>The HTML <code>button</code> tag defines a clickable button.</p>
+        <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+
+        <hr>
+
+    
+    <kbd>027. &#60;col&#62; Specifies column properties for each column within a &#60;colgroup&#62; element.</kbd><p/>
+    <kbd>028. &#60;colgroup&#62; Specifies a group of one or more columns in a table for formatting.</kbd><p/>
+
+        <table>
+            <colgroup>
+                <col span="2" style="background-color:#ddd;">
+                <col style="background-color:yellow;">
+            </colgroup>
+
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+            </tr>
+            
+            <tr>
+                <td>3476896</td>
+                <td>My first HTML</td>
+                <td>$53</td>
+            </tr>
+        </table>
+
+        <hr>
+
+    
+    <kbd>029. &#60;data&#62; Adds a machine-readable translation of a given content.</kbd><p/>
+
+        <ul>
+            <li><data value="21053">Cherry Tomato</data></li>
+            <li><data value="21054">Beef Tomato</data></li>
+            <li><data value="21055">Snack Tomato</data></li>
+        </ul>
+
+        <hr>
+
+    
+    <kbd>030. &#60;datalist&#62; Specifies a list of pre-defined options for input controls.</kbd><p/>
+
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+        
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+        <hr>
+
+
+</body>
+
+</html>
+
+
+
+

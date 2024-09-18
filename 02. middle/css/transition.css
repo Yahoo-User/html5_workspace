@@ -1,0 +1,39 @@
+section {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+
+    border: 1px solid darkgray;
+
+    float: left;
+    
+    /* 값이 작을수록 3d 요소의 왜곡이 심하게 일어나고, 값이 클수록 왜곡이 완만해집니다 */
+    perspective: 400px;
+}
+section article {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    background-color: blue;
+
+    text-align: center;
+    line-height: 200px;
+
+    opacity: .3;
+
+    transform: rotateY(0deg);
+
+    transition-property: transform opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+
+    /* transition: 속성명 지속시간 가속도 지연시간; */
+    /* transition: all 1s ease 0s; */
+}
+section:hover article {
+    transform: rotateY(45deg);
+    background-color: red;
+    opacity: 1;
+}

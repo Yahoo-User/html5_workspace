@@ -1,0 +1,31 @@
+
+body {
+    font-family: D2Coding;
+}
+
+kbd {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    padding: .2rem .4rem;
+    font-size: 87.5%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    background-color: #007fff;
+    color: white;
+}
+
+.kbd2 {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    padding: .2rem .4rem;
+    font-size: 87.5%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 200;
+    font-style: italic;
+
+    background-color: #2b7e6b;
+    color: white;
+}
+

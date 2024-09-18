@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sample39</title>
+
+    <style>
+        em {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The <em>&lt;form&gt;</em> element</h1>
+
+    <hr>
+
+    <form action="http://172.31.46.202:8080">
+
+        <!-- label 태그의 for 속성은, 연결시킬 태그에 지정된 id 값을 지정하면,
+        label 클릭시, focus가 연결된 태그에 설정됨. -->
+
+        <label for="fname">1. First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">2. Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+    
+    <p>Click the "Submit" button and the form-data will be sent to a page on the server called "action" attribute in the <em>form</em> tag.</p>
+
+
+</body>
+
+</html>

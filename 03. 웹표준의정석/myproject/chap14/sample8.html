@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample8</title>
+</head>
+
+<body>
+
+    <h1>sample8.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+
+        // **************************************************** //
+        //  1. Array with the same type's elements
+        // **************************************************** //
+        var arr = [];                       // Empty Array
+        var arr = [ 1, 2, 3];
+        var arr = [ true, false, true];
+        var arr = [ "name1", "name2", "name3" ];
+        var arr = [ .1, .2, .3 ];
+        var arr = [ [ 1, 2 ], [ 3 ], [ 4, 5, 6 ] ];
+
+        console.log(`1. type: ${typeof arr}, value:`, arr);
+
+        // **************************************************** //
+        //  2. Array with the different type's elements
+        // **************************************************** //
+        var arr = [ 1, 'name', true ];
+        var arr = [ 1, [ 2, 3 ], false, 'name'];
+
+        console.log(`2. type: ${ typeof arr }, value:`, arr);
+
+        // **************************************************** //
+        //  3. Array Manipulation
+        // **************************************************** //
+        var arr = [ 'a', 'b', 'c' ];
+
+        console.log(`3. arr:`, arr, `, length: ${ arr.length }`);
+        console.log('\t+ arr[index]:', arr[0], arr[1], arr[2], arr[3]);
+
+        // --------
+
+        for(var index in arr) {
+            console.log(`\t+ index: ${ index }`);
+        } // for-in
+
+        // --------
+
+        arr[3] = 'd';
+        arr[4] = 'e';
+
+        console.log(`\t+ arr[3]: ${ arr[3] }`);       // undefined (***)
+        console.log(`\t+ arr[4]: ${ arr[4] }`);       // undefined (***)
+
+        // --------
+
+        for(var value of arr) {
+            console.log(`\t+ value: ${ value }`);
+        } // for-of (enhanced for)
+
+        // --------
+
+        arr.forEach( e => console.log('\t+ ', e) );
+
+        // --------
+
+        arr[10] = 10;
+
+        console.log('arr:', arr);
+
+        // --------
+
+        arr.forEach( e => console.log('\t+ ', e) );
+
+        // --------
+
+        delete arr[7];
+        delete arr[8];
+        delete arr[9];
+        delete arr[10];
+
+        console.log('arr:', arr);
+
+        // --------
+
+        var subArr = arr.slice();               // all            
+        // var subArr = arr.slice(0, 4);           // 0 ~ 3     (half-open)
+        // var subArr = arr.slice(0, arr.length);  // 0 ~ end
+        // var subArr = arr.slice(0);              // 0 ~ end
+        // var subArr = arr.slice(3);              // 3 ~ end
+        // var subArr = arr.slice(3,5);            // 3 ~ 4     (half-open)
+
+        console.log('subArr:', subArr);
+
+        // --------
+
+        // arr.splice(3, arr.length);              // remove all elements.
+        // console.log('arr:', arr);
+
+        // --------
+
+        arr.splice(3, arr.length - 3, [1,2,3]);
+        console.log('arr:', arr);
+    </script>
+
+</body>
+
+</html>

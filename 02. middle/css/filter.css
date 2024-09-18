@@ -1,0 +1,44 @@
+div {
+    width: 650px;
+    margin: 100px auto;
+    padding: 10px;
+
+    border: 1px solid darkgray;
+}
+img {
+    width: 200px;
+    margin: 6px;
+}
+div img:nth-of-type(2) {
+    /* 값이 커질수록, blur 효과 커짐 */
+    filter: blur(2px);
+}
+div img:nth-of-type(3) {
+    /* 1보다 커지면 밝아짐, 1보다 작아지면 어두워짐 */
+    filter: brightness(2);
+    /* filter: brightness(.5); */
+}
+div img:nth-of-type(4) {
+    /* 100%에서 작아지면 명암대비효과 감소, 커지면 증가 */
+    filter: contrast(150%);
+}
+div img:nth-of-type(5) {    
+    /* 100%에 가까울 수록, 흑백으로 전환 */
+    filter: grayscale(80%);
+}
+div img:nth-of-type(6) {
+    /* 0deg 는 원래 이미지 색상, 0~360deg 까지 색상변경 가능 */
+    filter: hue-rotate(180deg);
+}
+div img:nth-of-type(7) {
+    /* 100%에 가까울 수록, 색이 반전됨 */
+    filter: invert(100%);
+}
+div img:nth-of-type(8) {
+    /* 0에 가까울 수록, 채도가 낮아짐 */
+    filter: saturate(0.3);
+}
+div img:nth-of-type(9) {
+    /* 100%에 가까울 수록, 갈색톤으로 변경됨 */
+    filter: sepia(100%);
+}

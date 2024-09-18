@@ -1,0 +1,65 @@
+body {
+    border: 5px double red;
+}
+.wrap {
+    width: 800px;
+
+    border: 5px double purple;
+    margin: 50px auto;
+}
+.wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrap .left {
+    width: 400px;
+    height: 400px;
+
+    background-color: lightgreen;
+
+    float: left;
+}
+.wrap .right {
+    width: 400px;
+    height: 400px;
+
+    background-color: lightblue;
+
+    float: left;
+    /* float: right; */
+
+    /* 1. 안쪽의 .box 요소의 위치설정(position: absolute)의 기준이 되는 부모요소가 되기 위해 넣어줌. (***) */
+    /* 2. 주요목적: 자식요소의 좌표값 기준을 설정할 때 주로 사용. (***) */
+    /* 3. position: relative 속성을 설정하였으나, top/bottom/left/right 속성을 사용하지 않았으므로, 원래위치그대로 있음. */
+    position: relative;
+}
+.wrap .right .box {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    
+    font-size: medium;
+    text-align: center;
+    line-height: 150px;
+
+    color: antiquewhite;
+    background-color: red;
+
+    /* ========= */
+
+    /* 1. position: absolute 은, 기본으로 부모요소 중 position 속성이 적용된 요소의 영역을 기준으로 위치설정   (***) */
+    /* 2. 만일 position 속성이 적용된 부모요소가 없으면, <body> 요소가 부모가 되고 이 영역(*Viewport*)을 기준으로 위치설정 (***) */
+    position: absolute;
+
+    right: 20px;
+    bottom: 30px;
+}
+.wrap .bottom {
+    width: 800px;
+    height: 100px;
+
+    background-color: pink;
+
+    float: left;
+}

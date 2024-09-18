@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon2.ico" type="image/x-icon">
+
+    <title>sample4</title>
+</head>
+
+<body>
+
+    <h1>sample4.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // **************************************** //
+        //  1. 10/8/16/2 진수
+        // **************************************** //
+
+        var number = 10;        // 10진수
+        var number = 010;       //  8진수
+        var number = 0x10;      // 16진수
+        var number = 0b10;      //  2진수
+
+        console.log(`1. type: ${typeof number}, value: ${number}`);
+
+
+        // **************************************** //
+        //  2. How to determine a variable's type
+        // **************************************** //
+        var variable = 1;       // number
+
+        variable = .1;          // number
+        variable = true;        // boolean
+        variable = '1';         // string
+        variable = [1];         // object (array)
+        variable = { age: 1 };  // object
+        variable = null;        // object
+        variable = undefined;   // undefined
+        variable = NaN;         // number
+        variable = Infinity;    // number
+        variable = -Infinity;   // number
+        variable;               // number : use of the variable.
+
+        console.log(`2. type: ${typeof variable}, value: ${variable}`);
+    </script>
+
+</body>
+
+</html>

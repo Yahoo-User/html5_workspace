@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample12</title>
+</head>
+
+<body>
+
+    <h1>sample12.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // *************************************************** //
+        // Function expressions:
+        //    (1) Anonymous Function
+        //    (2) Immediate Execution Function
+        //    (3) Arrow Function
+        // *************************************************** //
+
+        // (3) Arrow Function
+
+        // Case 1 : With no parameters:
+
+        // const hello = function () {
+        //     return "Hello!?";
+        // };  // anonymous function
+
+        // ---
+
+        // const hello = () => {
+        //     return "Hello!?";
+        // };  // anonymous function
+
+        // ---
+
+        // const hello = () => { return "Hello!?"; };  // anonymous function
+
+        // ---
+
+        const hello = () => "Hello!?";
+
+        // ---
+
+        document.write('<h2>', hello(), '</h2>');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon4.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon4.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample9</title>
+
+    <style>
+        strong {
+            font-size: 20px;
+            font-weight: bold;
+
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>sample9.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        // Math Built-in Object's methods
+
+        var from = 1, to = 6;
+        var randomNumber = Math.random();
+
+        document.write('<ol>');
+
+        document.write('<li>', 'Math.random() : ', randomNumber, '</li>');
+        document.write('<li>', `Math.random() * ${to} : `, randomNumber * to, '</li>');
+        document.write('<li>', `parseInt( Math.random() * ${to} ) : `, parseInt( randomNumber * to ), '</li>');
+        document.write('<li>', `parseInt( Math.random() * ${to} ) + ${from} : `, parseInt( randomNumber * to ) + from, '</li>');
+
+        document.write('</ol>');
+
+        // ---
+
+        // 일정 범위의 무작위 정수 구하기
+
+
+        // 1st. method
+        var number1 = parseInt( randomNumber * (to - from + 1) ) + from;
+
+        // 2nd. method
+        var number2 = Math.floor( randomNumber * (to - from + 1) ) + from;
+
+        document.write('1st. method ', `( ${from} to ${to} ): `, '<strong>', number1, '</strong>', '<br>');
+        document.write('2nd. method ', `( ${from} to ${to} ): `, '<strong>', number2, '</strong>');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sample28</title>
+
+    <style>
+        em {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Show <em>&lt;input="email"&gt;</em> fields</h1>
+
+    <hr>
+
+    <h4>Show an email field (allows <em>only one</em> email address):</h4>
+
+    <form>
+        <!-- label 태그의 for 속성은, 연결시킬 태그에 지정된 id 값을 지정하면,
+        label 클릭시, focus가 연결된 태그에 설정됨. -->
+
+        <label for="email">1. Enter your email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit">
+    </form>
+
+
+    <h4>Show an email field (allows <em>multiple</em> email addresses). Separate each email address with a <em>comma</em>:</h4>
+
+    <form>
+        <!-- label 태그의 for 속성은, 연결시킬 태그에 지정된 id 값을 지정하면,
+        label 클릭시, focus가 연결된 태그에 설정됨. -->
+
+        <label for="emails">2. Enter email addresses:</label>
+        <input type="email" id="emails" name="emails" multiple>
+
+        <input type="submit">
+    </form>
+
+
+</body>
+
+</html>

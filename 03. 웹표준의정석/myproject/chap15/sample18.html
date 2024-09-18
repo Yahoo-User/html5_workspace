@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon3.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon3.ico" type="image/x-icon" crossorigin="anonymous">
+
+    <title>sample18</title>
+</head>
+
+<body>
+
+    <h1>sample18.html</h1>
+
+    <hr>
+
+    <button id="change">글자색 바꾸기</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, nesciunt cupiditate. Earum, odio. Aliquam aspernatur, repellendus debitis saepe itaque aliquid voluptate fugiat magnam doloremque dolorum facilis facere rem est praesentium!</p>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // ---
+
+        // Case 1
+        // var changeBtn = document.querySelector('#change');
+        // changeBtn.onclick = changeColor;
+
+        // ---
+
+        // Case 2
+        // document.querySelector('#change').onclick = changeColor;
+
+        // ---
+
+        // function changeColor(e) {
+        //     console.debug('changeColor(', e, ') invoked.');
+
+        //     document.querySelector('p').style.color = 'blue';
+        // } // changeColor
+
+        // ---
+
+        // Case 3
+        document.querySelector('#change').onclick = function (e) {
+            console.debug('onclicked:', e);
+
+            document.querySelector('p').style.color = 'hotpink';
+        }; // onclick
+
+    </script>
+</body>
+
+</html>

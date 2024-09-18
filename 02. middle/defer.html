@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="ico/favicon.ico" type="image/x-icon">
+
+    <!-- <link rel="shortcut" href="ico/favicon.ico" type="image/x-icon">        XX -->
+
+    <title>defer</title>
+
+
+    <script>
+        // The `DOMContentLoaded` event fires
+        // when the initial HTML document has been completely loaded and parsed,
+        // without waiting for stylesheets, images, and subframes to finish loading.
+
+        // The original target for this event is the Document that has loaded.
+        // You can listen for this event on the Window interface to handle it in the capture or bubbling phases.
+
+        // A different event, `load`, should be used only to detect a fully-loaded page.
+        // It is a common mistake to use load where DOMContentLoaded would be more appropriate.
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+        });
+    </script>
+
+    <!-- 
+        1.  This Boolean attribute is set to indicate to a browser that the script is meant to be executed
+            after the document has been parsed, but before firing DOMContentLoaded.
+        2.  Scripts with the defer attribute will prevent the DOMContentLoaded event from firing
+            until the script has loaded and finished evaluating.
+        3.  This attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect.
+        4.  To achieve a similar effect for dynamically inserted scripts, use async="false" instead. (***)
+        5.  Scripts with the defer attribute will execute in the order in which they appear in the document.
+    -->
+
+    <!-- <script src="js/custom.js"></script> -->
+    <script defer src="js/custom.js"></script>
+
+</head>
+
+<body>
+
+    <h1 id="title">defer</h1>
+
+    <hr>
+
+    <!-- <script src="js/custom.js"></script> -->
+    <!-- <script src="http://localhost:8080/js/external.js"></script> -->
+
+</body>
+
+</html>

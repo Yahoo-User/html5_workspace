@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../ico/favicon.ico" type="image/x-icon">
+
+    <title>sample5</title>
+</head>
+
+<body>
+
+    <h1>sample5.html</h1>
+
+    <hr>
+
+
+    <script crossorigin="anonymous">
+        console.clear();
+
+        // 1. If confirm clicked, return input value.
+        // 2. If cancel clicked, return null. (***)
+        // 3. If prompt window cancelled, return null. (***)
+        // 4. If confirm clicked without input value, return empty string. (***)
+
+        // var name = prompt('이름을 입력하세요.');
+        var name = prompt('이름을 입력하세요.', 'Yoseph');      // With default value.
+        
+        console.log(`name: ${name}`);
+    </script>
+
+</body>
+
+</html>
